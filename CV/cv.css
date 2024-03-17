@@ -1,0 +1,119 @@
+
+:root {
+    --information: #EEEEEE;
+    --shortinfo: #111111;
+    --fontsize-shortinfo: 1.375rem;
+    --fontsize-information: 1.375rem;
+    font-size: 15px;
+}
+
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0px;
+    background: #141718;
+}
+
+#headline-text {
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.05em;
+    font-size: 1.5em;
+}
+
+#profile-title {
+    text-align: center;
+}
+#profile-inf-aligner {
+    
+    font-size: 1.375rem;
+
+    height: auto;
+    margin: auto;
+}
+#profile-text {
+    background-color: #FFFFFF11;
+}
+
+#inf-aligner {
+
+    display: flex;
+    flex-direction: row;
+
+    margin: 0 auto;
+    padding: 0;
+
+    border-radius: 0.5rem;
+
+    height: auto;
+/*
+    background-color: var(--white);*/
+}
+
+#shortinf-container {
+    
+    font-size: var(--fontsize-shortinfo);
+
+    width: 36%;
+    height: auto;
+    margin: 0 0.5rem 0 1rem;
+    z-index: 1;
+/*
+    background-color: #0399adCC;*/
+}
+
+
+#inf-container {
+    
+    font-size: var(--fontsize-information);
+
+    width: 64%;
+    height: auto;
+    margin: 0 1rem 0 0.5rem;
+    z-index: 1;
+}
+
+
+/*   Screen Size Adjustments   */
+
+/* Portrait */
+@media (max-width: 800px) {
+    #inf-container {
+        width: 100%;
+        margin: 0 auto;
+    }
+    #shortinf-container {
+        width: 100%;
+        margin: 0 auto;
+    }
+    #inf-aligner {
+        width: 90%;
+        flex-direction: column;
+    }
+    #profile-inf-aligner {
+        width: 90%;
+    }
+    #profile-info {
+        width: 90%;
+    }
+    #profile-title {
+        text-align: left;
+    }
+}
+
+/* Landscape */
+@media (min-width: 801px) {
+    
+    #inf-aligner {
+        width: 50%;
+        min-width: 800px;
+        max-width: 1200px;
+        margin-top: 2rem;
+    }
+    #profile-inf-aligner {
+        width: 50%;
+        min-width: 600px;
+        max-width: 800px;
+    }
+}
+
+

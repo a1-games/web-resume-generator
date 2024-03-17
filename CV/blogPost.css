@@ -1,0 +1,78 @@
+
+#post-template {
+    display: none;
+}
+
+.blogpost-container {
+
+    display: block;
+    position: relative;
+    
+    min-width: 50%;
+
+    margin: auto;
+    margin-bottom: 3rem ;
+    /*
+    min-height: 100px;
+    max-height: 340px;
+    */
+    background-color: #333333;
+    border-radius: 1rem;
+
+    /**/
+    width: 900px;
+    padding-bottom: 260px;
+}
+
+/*on mobile*/
+@media (max-width: 900px) {
+    .blogpost-container {
+        max-width: 100%;
+    }
+}
+
+
+.blogpost-message {
+    display: block;
+    position: absolute;
+    
+    margin: 0;
+    padding: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+
+
+.blogpost-thumbnail {
+    background-position: center;
+    background-size: cover;
+
+    display: block;
+    position: absolute;
+    
+    top: 50%;
+    transform: translateY(-50%);
+    height: 120%;
+    left: 0;
+    
+    width: 30%;
+    
+    margin: 0;
+    padding: 0;
+    border-radius: inherit;
+}
+
+
+.blogpost-button {
+    display: inline;
+    border-radius: 0.5rem;
+}
+
+
+
+
+
+
+

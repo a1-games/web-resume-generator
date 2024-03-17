@@ -1,0 +1,115 @@
+
+
+
+.inf-font {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    color: var(--information);
+}
+
+
+.inf-datetime {
+    font-size: 0.7em;
+    font-weight: 600;
+}
+
+.inf-location {
+    font-size: 0.7em;
+    font-family: 'RobotoLight', Arial, Helvetica, sans-serif;
+    font-style: italic;
+}
+
+.inf-title {
+    font-size: 0.9em;
+    font-weight: 600;
+    margin-top: 0.75rem;
+}
+
+.inf-text {
+    margin-top: 0.25rem;
+    font-size: 0.8em;
+    font-family: 'Roboto';
+    font-weight: 400;
+}
+
+.inf-title-big {
+    font-size: 1.5em;
+    letter-spacing: 0.1rem;
+    font-weight: 300;
+    margin: 0;
+    padding: 0 1rem;
+    font-family: 'Bebas Neue', 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+.seperation-line {
+    height: 0.025em;
+    width: auto;
+    background-color: var(--information);
+    margin: 0 1rem 1rem 1rem;
+}
+
+
+
+.short-inf {
+    font-size: 0.7em;
+    height: 2rem;
+    line-height: 2rem;
+    font-weight: 500;
+    font-family: 'RobotoMedium';
+    color: var(--shortinfo);
+    text-wrap: nowrap;
+}
+
+.short-inf-icon {
+    width: auto;
+    height: 1.2rem;
+    margin-right: 0.5rem;
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+}
+
+.short-inf-line{
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.short-inf-background-image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+.inf-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    margin-bottom: 1rem;
+    width: auto;
+    height: min-content;
+    overflow: hidden;
+
+    padding: 0.8rem 1rem;
+
+    background-repeat: repeat;
+    border-radius: 0.5rem;
+}
+
+.invert-icon {
+    filter: invert(0.95);
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+    <!-- Local Stylesheets -->
+    <link rel="stylesheet" href="../CSS/blogPost.css" media="screen">
+    <link rel="stylesheet" href="../blogposts/personal_information/personal_information.css" media="screen">
+    <link rel="stylesheet" href="../blogposts/personal_information/personal_information.css" media="print">
+    <link rel="stylesheet" href="../CSS/fonts.css" media="screen">
+</head>
+
+<body style="background-color: #0d1117;">
+
+    <!-- container for blogpost rows -->
+    <div class="no-text-decoration blogpost-container" id="pi-container" >
+        <div id="pi-headline">
+            <img src="CV/cvpic_square.jpg" id="pi-headshot">
+            <div id="pi-info">
+                <div id="pi-name">
+                    Your Name
+                </div>
+                <div style="width: 100%; height: 1px; background-color: white; margin: 0.5rem 0;"></div>
+                <div id="headline-text" >
+                    Catchy one-liner
+                    <br>
+                    text after line break, can be removed
+                </div>
+                <div style="height: 0.5em;">
+
+                </div>
+                <a id="pi-cv-link" >
+                    Click to download resume as .pdf
+                </a>
+            </div>
+        </div>
+        
+    </div>
+
+    <script>
+        var pdfButton = document.getElementById("pi-cv-link");
+        pdfButton.style.cursor = "pointer";
+        function printPDF()
+        {
+            
+            // open print dialog
+            print();
+        }
+        pdfButton.onclick = () => {
+            printPDF();
+        };
+    </script>
+
+</body>
+
+</html>
