@@ -18,7 +18,7 @@ headlinediv.id = "pi-headline";
 // headshot picture
 let headshot = document.createElement("img");
 headshot.id = "pi-headshot";
-headshot.src = "CV/headshot_square.jpg";
+headshot.src = "Customization/headshot_square.jpg";
 headlinediv.append(headshot);
 
 
