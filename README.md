@@ -52,6 +52,16 @@ You can remove background graphics entirely:
 - Locate the class tag ".short-inf-background-image".
 - Remove the "background-image" property.
 
+Example of Website
+-
+![image](https://github.com/a1-games/web-resume-generator/assets/83002224/ca408eff-1418-4f7f-b153-aaead2feafe3)
 
+Example of Printed look
+-
+![image](https://github.com/a1-games/web-resume-generator/assets/83002224/f7a2b27c-91c3-4994-84e9-3c2b924b9ec5)
+
+Example of Mobile Website
+-
+![image](https://github.com/a1-games/web-resume-generator/assets/83002224/394df67b-04e0-4242-9ffa-3a20107370df)
 
 
