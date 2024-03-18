@@ -18,7 +18,7 @@
         #9c11d3f6; // purple
         #e41d1df6; // red
      */
-    --shortinfo-color: #6c23f1f6;
+    --shortinfo-color: #11cf3af6;
 }
 
 #pi-cv-link {
@@ -31,7 +31,7 @@
 }
 
 .short-inf-background-image {
-    background-image: url("bckgrnd_pattern_00.png");
+    background-image: url("bckgrnd_pattern_02.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
