@@ -58,7 +58,8 @@
     margin: 2em 0;
     font-size: 0.9rem;
     font-style: italic;
-    font-weight: 200;
+    font-weight: 400;
+    letter-spacing: 0.05em;
     font-family: Roboto, Georgia, Times, 'Times New Roman', serif;
     text-decoration: none;
 }
