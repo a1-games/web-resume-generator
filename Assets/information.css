@@ -54,7 +54,7 @@
     height: 2rem;
     line-height: 2rem;
     font-weight: 500;
-    font-family: 'RobotoMedium';
+    font-family: 'Roboto';
     color: var(--shortinfo);
     text-wrap: nowrap;
 }
