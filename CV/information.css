@@ -54,7 +54,7 @@
     height: 2rem;
     line-height: 2rem;
     font-weight: 500;
-    font-family: 'RobotoMedium';
+    font-family: 'Roboto';
     color: var(--shortinfo);
     text-wrap: nowrap;
 }
@@ -64,7 +64,7 @@
     height: 1.2rem;
     margin-right: 0.5rem;
     background-color: transparent;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     flex-shrink: 0;
 }
@@ -73,6 +73,7 @@
     display: inline-flex;
     flex-direction: row;
     align-items: center;
+    z-index: 1;
 }
 
 .short-inf-background-image {
@@ -84,6 +85,15 @@
     z-index: -1;
 }
 
+.blackdrop {
+    position: absolute;
+    top: 1px;
+    bottom: 1px;
+    right: 1px;
+    left: 1px;
+    z-index: -2;
+    background-color: black;
+}
 
 .inf-container {
     position: relative;

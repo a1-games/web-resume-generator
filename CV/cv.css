@@ -1,7 +1,5 @@
 
 :root {
-    --information: #EEEEEE;
-    --shortinfo: #111111;
     --fontsize-shortinfo: 1.375rem;
     --fontsize-information: 1.375rem;
     font-size: 15px;
@@ -20,19 +18,6 @@ body {
     font-size: 1.5em;
 }
 
-#profile-title {
-    text-align: center;
-}
-#profile-inf-aligner {
-    
-    font-size: 1.375rem;
-
-    height: auto;
-    margin: auto;
-}
-#profile-text {
-    background-color: #FFFFFF11;
-}
 
 #inf-aligner {
 

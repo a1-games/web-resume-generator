@@ -8,18 +8,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <!-- Local Stylesheets -->
-    <link rel="stylesheet" href="CV/blogPost.css" media="screen">
     <link rel="stylesheet" href="CV/fonts.css" media="screen">
-    
-    <link rel="stylesheet" href="CV/blogPost.css" media="print">
     <link rel="stylesheet" href="CV/fonts.css" media="print">
     
+    <link rel="stylesheet" href="CV/blogPost.css" media="screen">
+    <link rel="stylesheet" href="CV/blogPost.css" media="print">
+    
+    <link rel="stylesheet" href="CV/personal_information.css" media="screen">
+    <link rel="stylesheet" href="CV/personal_information.css" media="print">
+    
     <link rel="stylesheet" href="CV/cv.css" media="screen">
-    <link rel="stylesheet" href="CV/cv_customization.css" media="screen">
-    <link rel="stylesheet" href="CV/information.css" media="screen">
-
     <link rel="stylesheet" href="CV/cv.css" media="print">
+    
+    <link rel="stylesheet" href="CV/cv_customization.css" media="screen">
     <link rel="stylesheet" href="CV/cv_customization.css" media="print">
+    
+    <link rel="stylesheet" href="CV/information.css" media="screen">
     <link rel="stylesheet" href="CV/information.css" media="print">
 
     <!-- Overwrite some stuff when printing the page -->
@@ -42,17 +46,18 @@
 </head>
 <body id="body">
     
+    <!-- If you want to add a header, uncomment this div
+    <div id="header" >
+    </div> -->
+
     <!-- Prepare a container for your calendar. -->
     <div id="personal_information" >
-    </div>
-
-    <div id="profile-inf-aligner" class="inf-font">
     </div>
 
 
     <div id="inf-aligner">
 
-        <!-- container for short form info -->
+        <!-- container for bullet point info -->
         <div id="shortinf-container" >
         </div>
 
@@ -62,86 +67,19 @@
 
     </div>
 
-
+    <!-- Tools -->
     <script src="CV/shortinfofiller.js"> </script>
     <script src="CV/informationfiller.js"> </script>
-    <script>
-        
 
-        // bullet point information
-        
-        insertShortInfo([
-            {iconname:"website",text:"Portfolio: a1creator.com", link:"https://a1creator.com",invert:true},
-        ]);
-        
-        insertInformationTitle("Contact", shortinfContainer);
-
-        insertSeperationLine(shortinfContainer);
-
-        insertShortInfo([
-            {iconname:"phone",text:"+XX XXX XXX XXXX",invert:true},
-            {iconname:"location",text:"Location, Country",invert:true},
-            {iconname:"email",text:"professional@gmail.com",invert:true},
-        ]);
-        
-        insertInformationTitle("Skills", shortinfContainer);
-
-        insertSeperationLine(shortinfContainer);
-
-        insertShortInfo([
-            {iconname:"checkmark",text:"Skill 1",invert:true},
-            {iconname:"checkmark",text:"Skill 2",invert:true},
-            {iconname:"checkmark",text:"Skill 3",invert:true},
-            {iconname:"checkmark",text:"Skill 4",invert:true},
-        ]);
-
-        insertInformationTitle("Languages", shortinfContainer);
-
-        insertSeperationLine(shortinfContainer);
-        
-        insertShortInfo([
-            {iconname:"checkmark",text:"C#",invert:true},
-            {iconname:"checkmark",text:"C++",invert:true},
-            {iconname:"checkmark",text:"python",invert:true},
-            {iconname:"checkmark",text:"Javascript",invert:true},
-            {iconname:"checkmark",text:"HTML & CSS",invert:true},
-        ]);
-
-        insertShortInfo([
-            // insert your own flags or remove this part if you're american
-            {iconname:"flag_COUNTRYCODE1",text:"Native"},
-            {iconname:"flag_COUNTRYCODE2",text:"Fluent"},
-            {iconname:"flag_COUNTRYCODE3",text:"Fluent"},
-        ]);
-        
-        // profile
-        insertInformationTitle("Profile", infContainer);
-
-        insertSeperationLine(infContainer);
-
-        insertText("This is where you descibe yourself positively.", infContainer)
-        
-        // text information
-
-        insertInformationTitle("Experience", infContainer);
-
-        insertSeperationLine(infContainer);
-    
-        insertInformation("0000 - 0000",
-                          "Work place",
-                          "Job Title",
-                          "Describe the job title");
-                          
-        insertInformationTitle("Education", infContainer);
-
-        insertSeperationLine(infContainer);
-
-        insertInformation("0000 - 0000",
-                          "School",
-                          "Degree Title",
-                          "Describe the degree");
-        
-    </script>
+    <!-- Load CV Layout From File -->
+    <!-- You can make multiple tailored resumes and switch between them -->
+    <script src="CV/CV_Example.js"> </script>
+    <!--
+    <script src="CV_Engineer.js"> </script>
+    <script src="CV_GameDev.js"> </script>
+    <script src="CV_Astronaut.js"> </script>
+    <script src="CV_Fisherman.js"> </script>
+    -->
         
 </body>
 

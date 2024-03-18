@@ -2,9 +2,6 @@
     size: A4 portrait;
 }
 
-#pi-info {
-    filter: invert(1);
-}
 
 
 html, body {
@@ -41,6 +38,10 @@ html, body {
     margin: 0 auto;
 }
 
+#pi-info {
+    filter: invert(1);
+}
+
 #pi-headline {
     padding: 0 1rem;
 }
@@ -52,10 +53,17 @@ html, body {
     filter: none;
 }
 
+#pi-name {
+    font-size: 1.4em;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.05em;
+}
+
 #headline-text {
     font-family: 'Roboto', sans-serif;
     letter-spacing: 0.05em;
-    font-size: 1em;
+    font-size: 1.3em;
 }
 
 .inf-title-big {
@@ -64,17 +72,22 @@ html, body {
 
 .information-container {
     margin: 0;
-    padding: 0 1em 1em 1em;
+    padding: 0 0 1rem 1rem;
+}
+
+.shortinf-container {
+    margin: 0 0.5rem 0 0;
 }
 
 .inf-title {
     margin-top: 0.4em;
 }
 
+/* an A4 page is treated as under 800 pixels */
 @media (max-width: 800px) {
     #inf-container {
         width: 64%;
-        margin: 0 1em 0 0.5em;
+        margin: 0 1em 0 0;
     }
     #shortinf-container {
         width: 36%;
@@ -83,24 +96,7 @@ html, body {
     #inf-aligner {
         flex-direction: row;
         margin: 0 auto;
-        width: 50%;
-        min-width: 800px;
-        max-width: 1200px;
+        width: 95%;
     }
     
-    #profile-inf-aligner {
-        width: auto;
-    }
-    #profile-info {
-        width: auto;
-    }
-    #profile-title {
-        text-align: left;
-    }
-        
-    #profile-inf-aligner {
-        width: 50%;
-        min-width: 600px;
-        max-width: 800px;
-    }
 }

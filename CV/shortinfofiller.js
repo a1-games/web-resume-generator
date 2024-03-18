@@ -12,6 +12,10 @@ function insertShortInfo(infosarray, bckgrndImage)
     shadeCover.className = "short-inf-background-image"
     newContainer.append(shadeCover);
 
+    let blackBackground = document.createElement("div");
+    blackBackground.className = "blackdrop "
+    newContainer.append(blackBackground);
+
     for (let i = 0; i < infosarray.length; i++) {
 
         // icon
