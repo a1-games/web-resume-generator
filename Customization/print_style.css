@@ -21,10 +21,9 @@ html, body {
 :root {
     --information: #111111;
     --shortinfo: #FFFFFF;
-    /* Play around with these 3 to get a nice full page  */
-    --fontsize-shortinfo: 1.375rem;
-    --fontsize-information: 1.25rem;
-    font-size: 16px;
+    --fontsize-shortinfo: 1.25rem;
+    --fontsize-information: 1.375rem;
+    font-size: 14px;
 }
 
 #header {
@@ -39,8 +38,8 @@ html, body {
     margin: 0 auto;
 }
 
-#pi-info {
-    filter: invert(1);
+#pi-headshot {
+    margin-bottom: 2em;
 }
 
 #pi-headline {

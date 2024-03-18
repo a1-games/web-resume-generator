@@ -1,5 +1,18 @@
 
 
+
+
+// headline
+
+setHeadlineName("Your Name Here");
+
+setOnelinerText("Lorem ipsum dolor sit amet, consectetur\ncommodo consequat");
+
+
+setDownloadText("Click to download resume as .pdf");
+
+
+
 // bullet point information
 
 insertShortInfo([

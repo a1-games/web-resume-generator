@@ -8,8 +8,17 @@
     
     /* Other Colors */
     --shadowColor: #11111122;
-    /*--shortinfo-color: #2247e9f9;*/
-    --shortinfo-color: #11cf3af5;
+    /* Some nice colours I've found:
+        I suggest keeping "f6" as the opacity.
+        #2247e9f6; // blue
+        #11cfc6f6; // cyan
+        #11cf3af6; // green
+        #e09a16f6; // orange
+        #e016a3f6; // pink
+        #9c11d3f6; // purple
+        #e41d1df6; // red
+     */
+    --shortinfo-color: #6c23f1f6;
 }
 
 #pi-cv-link {
@@ -22,7 +31,7 @@
 }
 
 .short-inf-background-image {
-    background-image: url("bckgrnd_pattern_02.png");
+    background-image: url("bckgrnd_pattern_00.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

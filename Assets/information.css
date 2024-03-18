@@ -14,8 +14,7 @@
 
 .inf-location {
     font-size: 0.7em;
-    font-weight: 200;
-    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-family: 'RobotoLight', Arial, Helvetica, sans-serif;
     font-style: italic;
 }
 
@@ -55,7 +54,7 @@
     height: 2rem;
     line-height: 2rem;
     font-weight: 500;
-    font-family: 'Roboto';
+    font-family: 'RobotoMedium';
     color: var(--shortinfo);
     text-wrap: nowrap;
 }

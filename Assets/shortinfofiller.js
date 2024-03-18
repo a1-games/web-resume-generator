@@ -21,7 +21,7 @@ function insertShortInfo(infosarray, bckgrndImage)
         // icon
         let _icon = document.createElement("img");
         _icon.className = "short-inf-icon";
-        _icon.src = `Assets/icon_${infosarray[i].iconname}.png`;
+        _icon.src = `CV/icon_${infosarray[i].iconname}.png`;
         if (infosarray[i].invert)
             _icon.classList.add("invert-icon");
 
