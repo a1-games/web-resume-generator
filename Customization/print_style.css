@@ -23,7 +23,7 @@ html, body {
     --shortinfo: #FFFFFF;
     --fontsize-shortinfo: 1.25rem;
     --fontsize-information: 1.375rem;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 #header {
