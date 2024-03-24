@@ -46,14 +46,23 @@
   line-height: 4em;
 }
 
+
 .editing-title {
   text-align: center;
   margin: 0.5em;
   color: var(--information);
 }
 
-
-
+.pattern-selector {
+  cursor: pointer;
+  background-position: center;
+  background-size: contain;
+  outline: 2px var(--information) solid;
+  outline-color: var(--information);
+}
+.selected-pattern-circle {
+  outline-color: var(--shortinfo-color) !important;
+}
 
 
 

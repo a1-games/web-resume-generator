@@ -26,8 +26,8 @@
     <link rel="stylesheet" href="Assets/information.css" media="screen">
     <link rel="stylesheet" href="Assets/information.css" media="print">
 
-    <link rel="stylesheet" href="Customization/cv_customization.css" media="screen">
-    <link rel="stylesheet" href="Customization/cv_customization.css" media="print">
+    <link rel="stylesheet" href="Assets/cv_customization.css" media="screen">
+    <link rel="stylesheet" href="Assets/cv_customization.css" media="print">
     
 
     <!-- Overwrite some stuff when printing the page -->
@@ -66,10 +66,7 @@
                     <div class="editing-title">
                         Select Background Pattern
                     </div>
-                    <div class="multi-item-container" style="margin: 0;">
-                        <div class="circle-option" style="background-image: url(Customization/bckgrnd_pattern_00.png); background-size: contain; background-position: center;"></div>
-                        <div class="circle-option" style="background-image: url(Customization/bckgrnd_pattern_01.png); background-size: contain; background-position: center;"></div>
-                        <div class="circle-option" style="background-image: url(Customization/bckgrnd_pattern_02.png); background-size: contain; background-position: center;"></div>
+                    <div id="pattern-circles-container" class="multi-item-container" style="margin: 0;">
                         <label for="edit-image-picker">
                             <div class="circle-option editing-title" style="background-color: #FFFFFF11; margin: 0;"> Upload </div>
                         </label>
@@ -77,7 +74,7 @@
                     </div>
                 </div>
                 <div class="multi-item-container">
-                    <div style="">
+                    <div style=" font-size: var(--fontsize-shortinfo);">
                         <div class="editing-title">
                             Preview
                         </div>
