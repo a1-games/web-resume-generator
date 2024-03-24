@@ -19,6 +19,9 @@
     
     <link rel="stylesheet" href="Assets/cv.css" media="screen">
     <link rel="stylesheet" href="Assets/cv.css" media="print">
+
+    <link rel="stylesheet" href="Assets/editing.css" media="screen">
+    <link rel="stylesheet" href="Assets/editing.css" media="print">
     
     <link rel="stylesheet" href="Assets/information.css" media="screen">
     <link rel="stylesheet" href="Assets/information.css" media="print">
@@ -28,15 +31,11 @@
     
 
     <!-- Overwrite some stuff when printing the page -->
-    <link rel="stylesheet" href="Customization/print_style.css" media="print">
+    <link rel="stylesheet" href="Assets/print_style.css" media="print">
     
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
-    <!-- Site Printing 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    -->
-    <script src="htmlPrint.js"></script>
 
 
     <script>
@@ -54,12 +53,69 @@
     <div id="header" >
     </div> -->
 
-    <!-- Prepare a container for your calendar. -->
-    <div id="personal_information" >
+
+
+
+    <!-- Resume Editing -->
+    <div id="resume-editing-aligner">
+        <div id="resume-editing-container">
+
+            <!-- Image and Color picker -->
+            <div class="editing-container " style="">
+                <div class=" editing-container">
+                    <div class="editing-title">
+                        Select Background Pattern
+                    </div>
+                    <div class="multi-item-container" style="margin: 0;">
+                        <div class="circle-option" style="background-image: url(Customization/bckgrnd_pattern_00.png); background-size: contain; background-position: center;"></div>
+                        <div class="circle-option" style="background-image: url(Customization/bckgrnd_pattern_01.png); background-size: contain; background-position: center;"></div>
+                        <div class="circle-option" style="background-image: url(Customization/bckgrnd_pattern_02.png); background-size: contain; background-position: center;"></div>
+                        <label for="edit-image-picker">
+                            <div class="circle-option editing-title" style="background-color: #FFFFFF11; margin: 0;"> Upload </div>
+                        </label>
+                        <input id="edit-image-picker" type="file" accept="image/*" value="" style="display: none;">
+                    </div>
+                </div>
+                <div class="multi-item-container">
+                    <div style="">
+                        <div class="editing-title">
+                            Preview
+                        </div>
+                        <div class="inf-container short-inf-container">
+                            <div class="short-inf-background-image"></div>
+                            <div class="blackdrop"></div>
+                            <div class="short-inf-line">
+                                <img class="short-inf-icon invert-icon" src="Assets/icon_checkmark.png">
+                                <div class="inf-font short-inf">
+                                    Page Colour
+                                </div>
+                            </div>
+                            <div class="short-inf-line" style="filter: invert(1);">
+                                <img class="short-inf-icon invert-icon" src="Assets/icon_checkmark.png">
+                                <div class="inf-font short-inf">
+                                    Print Colour
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="multi-item-container editing-container" style="margin: 0;">
+                        <input id="edit-color-picker" type="color" value="#10C838" class="circle-option">
+                        <div class="editing-title">
+                            Select Primary Colour
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
     </div>
 
-    <div id="download-html-button" style="background-color: aqua; margin: auto; cursor: pointer;">
-        DOWNLOAD
+
+
+
+    <!-- Page -->
+    <div id="personal_information" >
     </div>
 
     <div id="inf-aligner">
@@ -78,8 +134,8 @@
     <script src="Assets/shortinfofiller.js"> </script>
     <script src="Assets/informationfiller.js"> </script>
     <script src="Assets/headlinefiller.js"> </script>
+    <script src="Assets/editing.js"> </script>
     
-    <script src="DOWNLOAD_TESTING.js"> </script>
 
     <!-- Load CV Layout From File -->
     <!-- You can make multiple tailored resumes and switch between them -->

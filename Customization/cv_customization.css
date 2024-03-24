@@ -19,6 +19,7 @@
         #e41d1df6; // red
      */
     --shortinfo-color: #11cf3af6;
+    --background-pattern: url("bckgrnd_pattern_02.png");
 }
 
 #pi-cv-link {
@@ -31,7 +32,7 @@
 }
 
 .short-inf-background-image {
-    background-image: url("bckgrnd_pattern_02.png");
+    background-image: var(--background-pattern);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

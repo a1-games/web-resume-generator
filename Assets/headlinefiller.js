@@ -43,14 +43,6 @@ onelinerdiv.id ="headline-text";
 textdiv.append(onelinerdiv);
 
 
-// download button
-let downloadButton =  document.createElement("a");
-downloadButton.id ="pi-cv-link";
-downloadButton.style.cursor = "pointer";
-downloadButton.onclick = () => {
-    print();
-};
-textdiv.append(downloadButton);
 
 headlinediv.append(textdiv);
 
@@ -71,11 +63,6 @@ function setHeadlineName(name)
 function setOnelinerText(text)
 {
     onelinerdiv.innerText = text;
-}
-
-function setDownloadText(text)
-{
-    downloadButton.innerText = text;
 }
 
 

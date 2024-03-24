@@ -1,0 +1,142 @@
+
+:root {
+    --boxColor: #FFFFFF11;
+}
+
+#resume-editing-aligner {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#resume-editing-container {
+  width: 50%;
+  margin: 0 auto;
+  font-size: 16px;
+}
+
+.editing-container {
+  height: auto;
+  width: 80%;
+  background-color: var(--boxColor);
+  border-radius: 0.5em;
+  padding: 2em;
+  margin: auto;
+  margin-bottom: 1em !important;
+}
+
+.multi-item-container {
+  display: flex;
+  width: fit-content;
+  gap: 1em;
+  margin: auto;
+  flex-shrink: 0;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.circle-option {
+  height: 4em;
+  width: 4em;
+  border: none;
+  outline: none;
+  border-radius: 2em;
+  overflow: hidden;
+  justify-content: center;
+  line-height: 4em;
+}
+
+.editing-title {
+  text-align: center;
+  margin: 0.5em;
+  color: var(--information);
+}
+
+
+
+
+
+
+/* IMAGE PICKER */
+
+#edit-image-picker {
+  top: 0;
+  bottom: 0;
+}
+
+/* COLOUR PICKER */
+input[type="color" i]#edit-color-picker {
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+input[type="color"]::-moz-color-swatch {
+  border: none;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+  border-radius: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+}
+
+
+
+
+
+/* SLIDER */
+
+.fontsize-slider {
+    /* margin auto doesn't work for sliders ... */
+    width: 100%;
+
+    height: auto;
+
+}
+
+input[type='range'] {
+    overflow: hidden;
+    -webkit-appearance: none;
+    background-color: #FFFFFF11;
+  }
+  input[type='range']::-webkit-slider-runnable-track {
+    height: 10px;
+    -webkit-appearance: none;
+    color: var(--shortinfo-color);
+    margin-top: -1px;
+  }
+  input[type='range']::-webkit-slider-thumb {
+    width: 10px;
+    -webkit-appearance: none;
+    height: 10px;
+    cursor: ew-resize;
+    background: var(--shortinfo-color);
+    color: #ff0000;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

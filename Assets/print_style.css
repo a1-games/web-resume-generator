@@ -44,7 +44,7 @@ html, body {
 
 #pi-headline {
     padding: 0 1rem;
-    padding-top: 2em;
+    padding-top: 0;
 }
 
 #pi-cv-link {
@@ -83,6 +83,10 @@ html, body {
 
 .inf-title {
     margin-top: 0.4em;
+}
+
+#resume-editing-aligner {
+    display: none;
 }
 
 /* an A4 page is treated as under 800 pixels */
