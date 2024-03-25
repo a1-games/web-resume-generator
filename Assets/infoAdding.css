@@ -1,0 +1,54 @@
+
+
+
+
+
+
+#shortinfo-adder {
+    background-color: var(--shortinfo-color);
+    border-radius: 0.5em;
+}
+
+#information-adder {
+    background-color: #FFFFFF11;
+    border-radius: 0.5em;
+
+}
+
+
+.sepLineAdder {
+    display: block;
+    height: auto;
+    width: fit-content;
+    padding: 1em;
+    background-color: #FFFFFF11;
+    cursor: pointer;
+    border-radius: 0.5em;
+    text-align: center;
+    justify-content: center;
+    font-weight: 500;
+    user-select: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

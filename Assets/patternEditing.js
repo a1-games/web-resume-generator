@@ -67,7 +67,7 @@ for (let i = 0; i < patternDataObjs.length; i++) {
                       `url('Assets/${patternDataObjs[i].filename}')`);
 }
 // mark the default pattern as selected
-selectPattern(patternDataObjs[2].element);
+selectPattern(patternDataObjs[2].element, `url('${patternDataObjs[2].filename}')`);
 
 // uploading
 let patternUploadButton = document.getElementById("edit-image-picker");

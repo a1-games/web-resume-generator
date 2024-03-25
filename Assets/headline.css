@@ -13,11 +13,10 @@
     justify-content: center;
 
     margin-bottom: 0;
-    margin-top: 1rem;
 }
 
 #pi-headline {
-    padding: 1rem;
+    padding: 1em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -55,10 +54,11 @@
 }
 
 #pi-cv-link {
-    margin: 2em auto;
-    font-size: 0.9rem;
+    display: block;
+    margin: auto;
+    font-size: 1.1em;
     font-style: italic;
-    font-weight: 400;
+    font-weight: 600;
     letter-spacing: 0.05em;
     font-family: Roboto, Georgia, Times, 'Times New Roman', serif;
     text-decoration: none;

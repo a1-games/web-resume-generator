@@ -52,7 +52,10 @@ piContainer.append(container);
 
 
 
-
+function setHeadshot(url)
+{
+    headshot.src = url;
+}
 
 
 function setHeadlineName(name)

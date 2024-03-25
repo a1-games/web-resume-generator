@@ -39,13 +39,9 @@ html, body {
 }
 
 #pi-headshot {
-    margin-bottom: 2em;
+    margin-bottom: auto;
 }
 
-#pi-headline {
-    padding: 0 1rem;
-    padding-top: 0;
-}
 
 #pi-cv-link {
     display: none;
@@ -86,6 +82,9 @@ html, body {
 }
 
 #resume-editing-aligner {
+    display: none;
+}
+#JS-edit-overlay {
     display: none;
 }
 

@@ -16,17 +16,20 @@
 
 .editing-container {
   height: auto;
-  width: 80%;
   background-color: var(--boxColor);
   border-radius: 0.5em;
-  padding: 2em;
+  padding: 1.5em;
   margin: auto;
+}
+
+.footspace {
+  width: 80% !important;
   margin-bottom: 1em !important;
 }
 
 .multi-item-container {
   display: flex;
-  width: fit-content;
+  min-width: fit-content;
   gap: 1em;
   margin: auto;
   flex-shrink: 0;
@@ -64,6 +67,11 @@
   outline-color: var(--shortinfo-color) !important;
 }
 
+#shortinfo-preview {
+  flex-grow: 1;
+  margin: 0;
+  padding: 1.5em;
+}
 
 
 /* IMAGE PICKER */

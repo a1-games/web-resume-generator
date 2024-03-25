@@ -28,11 +28,7 @@ body {
     margin: 0 auto;
     padding: 0;
 
-    border-radius: 0.5rem;
 
-    height: auto;
-/*
-    background-color: var(--white);*/
 }
 
 #shortinf-container {
@@ -94,7 +90,6 @@ body {
         width: 50%;
         min-width: 800px;
         max-width: 1200px;
-        margin-top: 2rem;
     }
     #profile-inf-aligner {
         width: 50%;

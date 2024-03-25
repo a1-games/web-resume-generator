@@ -23,7 +23,7 @@
 }
 
 #pi-cv-link {
-    color: var(--shortinfo-color) !important;
+    color: var(--shortinfo) !important;
 }
 
 .short-inf-container {

@@ -10,16 +10,16 @@ let sliderDataObjs = [
         changeSizeProperty:(value)=>{document.documentElement.style.fontSize = `${value}px`},
     },
     {
-        name:"infsize",
-        info:"Information",
-        sliderProperties:{min:0.125, max:3,step:0.125, defVal:1.375, unit:"rem"},
-        changeSizeProperty:(value)=>{document.documentElement.style.setProperty(`--fontsize-information`, `${value}rem`)},
-    },
-    {
         name:"shortinf",
         info:"Short Information",
         sliderProperties:{min:0.125, max:3,step:0.125, defVal:1.25, unit:"rem"},
         changeSizeProperty:(value)=>{document.documentElement.style.setProperty(`--fontsize-shortinfo`, `${value}rem`)},
+    },
+    {
+        name:"infsize",
+        info:"Information",
+        sliderProperties:{min:0.125, max:3,step:0.125, defVal:1.375, unit:"rem"},
+        changeSizeProperty:(value)=>{document.documentElement.style.setProperty(`--fontsize-information`, `${value}rem`)},
     },
 ]
 
@@ -30,7 +30,7 @@ var sliders = [];
 
 for (let i = 0; i < sliderDataObjs.length; i++) {
     let sliderbox = document.createElement("div");
-    sliderbox.className = "editing-container";
+    sliderbox.className = "editing-container footspace";
 
     let title = document.createElement("div");
     title.className = "editing-title";

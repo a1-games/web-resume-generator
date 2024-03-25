@@ -25,6 +25,9 @@
 
     <link rel="stylesheet" href="Assets/jsEditing.css" media="screen">
     <link rel="stylesheet" href="Assets/jsEditing.css" media="print">
+
+    <link rel="stylesheet" href="Assets/infoAdding.css" media="screen">
+    <link rel="stylesheet" href="Assets/infoAdding.css" media="print">
     
     <link rel="stylesheet" href="Assets/information.css" media="screen">
     <link rel="stylesheet" href="Assets/information.css" media="print">
@@ -66,7 +69,35 @@
         <div id="resume-editing-container">
 
             <!-- Image and Color picker -->
-            <div class="editing-container " style="">
+            <div class="editing-container footspace">
+                <div class=" multi-item-container">
+                    <div id="shortinfo-preview"  class="inf-container short-inf-container"> 
+                        <div class="short-inf-background-image"></div>
+                        <div class="blackdrop"></div>
+                        <div class="short-inf-line"  style=" font-size: var(--fontsize-shortinfo);">
+                            <img class="short-inf-icon invert-icon" src="Assets/icon_checkmark.png">
+                            <div class="inf-font short-inf">
+                                Page Colour Preview
+                            </div>
+                        </div>
+                        <div class="short-inf-line" style="filter: invert(1); font-size: var(--fontsize-shortinfo);">
+                            <img class="short-inf-icon invert-icon" src="Assets/icon_checkmark.png">
+                            <div class="inf-font short-inf">
+                                Print Colour Preview
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class=" editing-container multi-item-container " style="margin: 0; flex-grow: 1;">
+                        <input id="edit-color-picker" type="color" value="#10C838" class="circle-option">
+                        <div class="editing-title">
+                            Select Primary Colour
+                        </div>
+                    </div>
+                </div>
+                <div style="height: 1em;">
+
+                </div>
                 <div class=" editing-container">
                     <div class="editing-title">
                         Select Background Pattern
@@ -76,36 +107,6 @@
                             <div class="circle-option editing-title" style="background-color: #FFFFFF11; margin: 0;"> Upload </div>
                         </label>
                         <input id="edit-image-picker" type="file" accept="image/*" value="" style="display: none;">
-                    </div>
-                </div>
-                <div class="multi-item-container">
-                    <div style=" font-size: var(--fontsize-shortinfo);">
-                        <div class="editing-title">
-                            Preview
-                        </div>
-                        <div class="inf-container short-inf-container">
-                            <div class="short-inf-background-image"></div>
-                            <div class="blackdrop"></div>
-                            <div class="short-inf-line">
-                                <img class="short-inf-icon invert-icon" src="Assets/icon_checkmark.png">
-                                <div class="inf-font short-inf">
-                                    Page Colour
-                                </div>
-                            </div>
-                            <div class="short-inf-line" style="filter: invert(1);">
-                                <img class="short-inf-icon invert-icon" src="Assets/icon_checkmark.png">
-                                <div class="inf-font short-inf">
-                                    Print Colour
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="multi-item-container editing-container" style="margin: 0;">
-                        <input id="edit-color-picker" type="color" value="#10C838" class="circle-option">
-                        <div class="editing-title">
-                            Select Primary Colour
-                        </div>
                     </div>
                 </div>
             </div>
@@ -137,6 +138,7 @@
     <script src="Assets/informationfiller.js"> </script>
     <script src="Assets/headlinefiller.js"> </script>
     <script src="Assets/fontEditing.js"> </script>
+    <script src="Assets/infoAdding.js"> </script>
     <script src="Assets/patternEditing.js"> </script>
     <script src="Assets/jsEditing.js"> </script>
     <!-- Leave DL for last -->
