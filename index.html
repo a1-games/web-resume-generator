@@ -70,8 +70,8 @@
 
             <!-- Image and Color picker -->
             <div class="editing-container footspace">
-                <div class=" multi-item-container">
-                    <div id="shortinfo-preview"  class="inf-container short-inf-container"> 
+                <div class=" multi-item-container" style="min-height: fit-content;">
+                    <div id="shortinfo-preview"  class="short-inf-container editing-container" style="flex: 1; flex-direction: column; display: flex;"> 
                         <div class="short-inf-background-image"></div>
                         <div class="blackdrop"></div>
                         <div class="short-inf-line"  style=" font-size: var(--fontsize-shortinfo);">
@@ -88,7 +88,7 @@
                         </div>
                     </div>
                     
-                    <div class=" editing-container multi-item-container " style="margin: 0; flex-grow: 1;">
+                    <div class=" editing-container multi-item-container " style="display: flexbox; margin: 0; flex: 1;">
                         <input id="edit-color-picker" type="color" value="#10C838" class="circle-option">
                         <div class="editing-title">
                             Select Primary Colour

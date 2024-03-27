@@ -16,7 +16,26 @@
 }
 
 
-.sepLineAdder {
+.titleAdderInput {
+    display: block;
+    height: auto;
+    width: fit-content;
+    padding: 0.5em;
+    background-color: #FFFFFF11;
+    cursor: pointer;
+    border-radius: 0.25em;
+    text-align: center;
+    justify-content: center;
+    font-weight: 500;
+    font-family: 'Bebas Neue', 'Roboto', Arial, Helvetica, sans-serif;
+    user-select: none;
+    font-size: 22px;
+
+    outline: none;
+    border: none;
+}
+
+.infoAddButton {
     display: block;
     height: auto;
     width: fit-content;

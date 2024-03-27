@@ -15,6 +15,7 @@
 }
 
 .editing-container {
+  position: relative;
   height: auto;
   background-color: var(--boxColor);
   border-radius: 0.5em;
@@ -67,11 +68,6 @@
   outline-color: var(--shortinfo-color) !important;
 }
 
-#shortinfo-preview {
-  flex-grow: 1;
-  margin: 0;
-  padding: 1.5em;
-}
 
 
 /* IMAGE PICKER */

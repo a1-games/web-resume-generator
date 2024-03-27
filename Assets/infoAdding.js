@@ -2,8 +2,59 @@
 
 // editingContainer
 
+
+// Parent for the whole thing
 let columnHolder = document.createElement("div");
 columnHolder.className = "multi-item-container editing-container footspace";
+
+
+
+
+// ------------------------------------------------------------------
+// ------------------------------------------------------------------
+
+
+// FUNCTIONS
+function MultiContainer()
+{
+    let multicon = document.createElement("div");
+    multicon.className = "multi-item-container footspace";
+    return multicon;
+}
+
+function TextObject(_className, _innerText, _invert)
+{
+    let textobj = document.createElement("div");
+    textobj.className = _className;
+    textobj.innerText = _innerText;
+    textobj.style.filter = _invert ? "invert(1)" : "";
+    return textobj;
+}
+
+function InputField(_className, _defValue, _invert)
+{
+    let inputfield = document.createElement("input");
+    inputfield.type = "text";
+    inputfield.className = _className;
+    inputfield.value = _defValue;
+    inputfield.style.filter = _invert ? "invert(1)" : "";
+    inputfield.onfocus = () => {
+        inputfield.value = "";
+    };
+    return inputfield;
+}
+
+
+
+
+
+
+
+
+
+// ------------------------------------------------------------------
+// ------------------------------------------------------------------
+
 
 
 // SHORT INFO
@@ -12,26 +63,49 @@ shortBox.className = "editing-container";
 shortBox.id = "shortinfo-adder";
 shortBox.style.flexGrow = 1;
 
-let shortBoxTitle = document.createElement("div");
-shortBoxTitle.className = "editing-title";
-shortBoxTitle.innerText = "Bullet Points";
-shortBoxTitle.style.filter = "invert(1)";
+let shortBoxTitle = TextObject("editing-title", "Bullet Points", true)
+shortBox.append(shortBoxTitle);
 
-let shortBoxSeperationLineAdder = document.createElement("div");
-shortBoxSeperationLineAdder.className = "sepLineAdder";
-shortBoxSeperationLineAdder.innerText = "Add seperation line";
-shortBoxSeperationLineAdder.style.filter = "invert(1)";
+// TITLE
+let shortBoxTitleAdderHolder = MultiContainer();
+shortBox.append(shortBoxTitleAdderHolder);
+
+
+// Input Field
+let shortBoxTitleAdder = InputField("titleAdderInput", "Section Title", true)
+shortBoxTitleAdderHolder.append(shortBoxTitleAdder);
+
+
+// Adding Button
+let shortBoxTitleAdderButton = TextObject("infoAddButton", "Add Title", true)
+shortBoxTitleAdderButton.onclick = () => {
+    insertInformationTitle(shortBoxTitleAdder.value, shortinfContainer);
+};
+shortBoxTitleAdderHolder.append(shortBoxTitleAdderButton);
+
+
+
+// SEPERATION LINE
+let shortBoxSepLineHolder = MultiContainer();
+
+// Adding Button
+let shortBoxSeperationLineAdder = TextObject("infoAddButton", "Add seperation line", true)
 shortBoxSeperationLineAdder.onclick = () => {
     insertSeperationLine(shortinfContainer);
 };
+shortBoxSepLineHolder.append(shortBoxSeperationLineAdder);
 
-shortBox.append(shortBoxTitle);
-shortBox.append(shortBoxSeperationLineAdder);
+
+// input field with button and image icon picker
+// add bullet point
+
+
+
+
+shortBox.append(shortBoxSepLineHolder);
 columnHolder.append(shortBox);
-
-
-
-
+// ------------------------------------------------------------------
+// ------------------------------------------------------------------
 
 
 // LONG INFO
@@ -40,13 +114,11 @@ infBox.className = "editing-container";
 infBox.id = "information-adder";
 infBox.style.flexGrow = 1;
 
-let infBoxTitle = document.createElement("div");
-infBoxTitle.className = "editing-title";
-infBoxTitle.innerText = "Information";
+let infBoxTitle = TextObject("editing-title", "Information", false)
 
-let infBoxSeperationLineAdder = document.createElement("div");
-infBoxSeperationLineAdder.className = "sepLineAdder";
-infBoxSeperationLineAdder.innerText = "Add seperation line";
+
+// SEPERATION LINE
+let infBoxSeperationLineAdder = TextObject("infoAddButton", "Add seperation line", false)
 infBoxSeperationLineAdder.onclick = () => {
     insertSeperationLine(infContainer);
 };
