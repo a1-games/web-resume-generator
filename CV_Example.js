@@ -31,8 +31,8 @@ insertInformationTitle("Skills", shortinfContainer);
 insertSeperationLine(shortinfContainer);
 
 insertShortInfo([
-    {iconname:"checkmark",text:"Skill 1",invert:true},
-    {iconname:"checkmark",text:"Skill 2",invert:true},
+    {iconname:"address",text:"Skill 1",invert:true},
+    {iconname:"mail",text:"Skill 2",invert:true},
     {iconname:"checkmark",text:"Skill 3",invert:true},
     {iconname:"checkmark",text:"Skill 4",invert:true},
 ]);

@@ -15,10 +15,10 @@ columnHolder.className = "multi-item-container editing-container footspace";
 
 
 // FUNCTIONS
-function MultiContainer()
+function MultiContainer(_footspace = true)
 {
     let multicon = document.createElement("div");
-    multicon.className = "multi-item-container footspace";
+    multicon.className = `multi-item-container ${_footspace ? "footspace" : ""}`;
     return multicon;
 }
 
@@ -72,12 +72,12 @@ shortBox.append(shortBoxTitleAdderHolder);
 
 
 // Input Field
-let shortBoxTitleAdder = InputField("titleAdderInput", "Section Title", true)
+let shortBoxTitleAdder = InputField("titleAdderInput dark-trans", "Section Title", false)
 shortBoxTitleAdderHolder.append(shortBoxTitleAdder);
 
 
 // Adding Button
-let shortBoxTitleAdderButton = TextObject("infoAddButton", "Add Title", true)
+let shortBoxTitleAdderButton = TextObject("infoAddButton dark-trans", "Add Title", false)
 shortBoxTitleAdderButton.onclick = () => {
     insertInformationTitle(shortBoxTitleAdder.value, shortinfContainer);
 };
@@ -89,7 +89,7 @@ shortBoxTitleAdderHolder.append(shortBoxTitleAdderButton);
 let shortBoxSepLineHolder = MultiContainer();
 
 // Adding Button
-let shortBoxSeperationLineAdder = TextObject("infoAddButton", "Add seperation line", true)
+let shortBoxSeperationLineAdder = TextObject("infoAddButton dark-trans", "Add seperation line", false)
 shortBoxSeperationLineAdder.onclick = () => {
     insertSeperationLine(shortinfContainer);
 };
@@ -115,23 +115,46 @@ infBox.id = "information-adder";
 infBox.style.flexGrow = 1;
 
 let infBoxTitle = TextObject("editing-title", "Information", false)
+infBox.append(infBoxTitle);
+
+
+
+// TITLE
+let infBoxTitleAdderHolder = MultiContainer();
+infBox.append(infBoxTitleAdderHolder);
+
+
+// Input Field
+let infBoxTitleAdder = InputField("titleAdderInput light-trans", "Section Title", true)
+infBoxTitleAdderHolder.append(infBoxTitleAdder);
+
+
+// Adding Button
+let infBoxTitleAdderButton = TextObject("infoAddButton light-trans", "Add Title", true)
+infBoxTitleAdderButton.onclick = () => {
+    insertInformationTitle(infBoxTitleAdder.value, infContainer);
+};
+infBoxTitleAdderHolder.append(infBoxTitleAdderButton);
 
 
 // SEPERATION LINE
-let infBoxSeperationLineAdder = TextObject("infoAddButton", "Add seperation line", false)
+let infBoxSepLineHolder = MultiContainer();
+
+// Adding Button
+let infBoxSeperationLineAdder = TextObject("infoAddButton light-trans", "Add seperation line", true)
 infBoxSeperationLineAdder.onclick = () => {
     insertSeperationLine(infContainer);
 };
+infBoxSepLineHolder.append(infBoxSeperationLineAdder);
+infBox.append(infBoxSepLineHolder);
 
-infBox.append(infBoxTitle);
-infBox.append(infBoxSeperationLineAdder);
+
+
+
 columnHolder.append(infBox);
-
-
-
-
-
 editingContainer.append(columnHolder);
+
+
 
 
 

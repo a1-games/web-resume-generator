@@ -21,7 +21,6 @@
     height: auto;
     width: fit-content;
     padding: 0.5em;
-    background-color: #FFFFFF11;
     cursor: pointer;
     border-radius: 0.25em;
     text-align: center;
@@ -40,7 +39,6 @@
     height: auto;
     width: fit-content;
     padding: 1em;
-    background-color: #FFFFFF11;
     cursor: pointer;
     border-radius: 0.5em;
     text-align: center;
@@ -49,7 +47,14 @@
     user-select: none;
 }
 
+.light-trans {
+    background-color: #FFFFFF22;
+}
 
+
+.dark-trans {
+    background-color: #00000022;
+}
 
 
 
