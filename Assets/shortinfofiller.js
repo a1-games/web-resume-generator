@@ -33,7 +33,7 @@ function appendShortInfo()
 
         // text
         let _text = document.createElement("div");
-        _text.className = "inf-font short-inf";
+        _text.className = "inf-font short-inf editable";
         _text.innerText = infosarray[i].text;
         if (infosarray[i].link != null)
         {

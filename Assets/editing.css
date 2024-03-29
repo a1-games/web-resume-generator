@@ -3,6 +3,17 @@
     --boxColor: #FFFFFF11;
 }
 
+#direct-editing-inputfield {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  outline: none;
+  min-width: 20em;
+  resize: none;
+}
+
 #resume-editing-aligner {
   width: 100%;
   margin: 0 auto;
@@ -76,6 +87,10 @@
   opacity: 0.4 !important;
 }
 
+.selected-editable {
+  opacity: 0.5;
+  position: relative;
+}
 
 /* BULLET POINT ICON PICKER */
 

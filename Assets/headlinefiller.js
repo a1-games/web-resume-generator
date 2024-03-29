@@ -29,6 +29,7 @@ textdiv.id = "pi-info";
 // name div
 let namediv =  document.createElement("div");
 namediv.id ="pi-name";
+namediv.className = " editable";
 textdiv.append(namediv);
 
 // seperation line
@@ -40,6 +41,7 @@ textdiv.append(_line);
 // one-liner div
 let onelinerdiv =  document.createElement("div");
 onelinerdiv.id ="headline-text";
+onelinerdiv.className = " editable";
 textdiv.append(onelinerdiv);
 
 

@@ -27,22 +27,22 @@ function insertInformation(datetime, location, title, text)
 
     // timedate
     let _time = document.createElement("div");
-    _time.className = "inf-font inf-datetime ";
+    _time.className = "inf-font inf-datetime editable";
     _time.innerText = datetime;
 
     // location
     let _location = document.createElement("div");
-    _location.className = "inf-font inf-location ";
+    _location.className = "inf-font inf-location editable";
     _location.innerText = location;
     
     // title
     let _title = document.createElement("div");
-    _title.className = "inf-font inf-title ";
+    _title.className = "inf-font inf-title editable";
     _title.innerText = title;
 
     // description text
     let _text = document.createElement("div");
-    _text.className = "inf-font inf-text ";
+    _text.className = "inf-font inf-text editable";
     _text.innerText = text;
 
     
@@ -62,7 +62,7 @@ function insertText(text, container)
 
     // description text
     let _text = document.createElement("div");
-    _text.className = "inf-font inf-text ";
+    _text.className = "inf-font inf-text editable";
     _text.innerText = text;
     newContainer.append(_text);
     
