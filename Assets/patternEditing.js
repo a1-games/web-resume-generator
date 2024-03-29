@@ -52,7 +52,7 @@ function selectPattern(element, imgurl)
 function addPatternSeletor(patternDataObj, styleURL)
 {
     let patternSelector = document.createElement("div");
-    patternSelector.className = "circle-option pattern-selector";
+    patternSelector.className = "circle-option pattern-selector clickable";
     patternSelector.style.backgroundImage = styleURL;
     patternSelector.onclick = () => {
         patternDataObj.setPattern(patternSelector, `url('${patternDataObj.filename}')`);

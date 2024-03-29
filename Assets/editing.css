@@ -29,6 +29,7 @@
 }
 
 .multi-item-container {
+  position: relative;
   display: flex;
   min-width: fit-content;
   gap: 1em;
@@ -54,11 +55,11 @@
 .editing-title {
   text-align: center;
   margin: 0.5em;
+  user-select: none;
   color: var(--information);
 }
 
 .pattern-selector {
-  cursor: pointer;
   background-position: center;
   background-size: contain;
   outline: 2px var(--information) solid;
@@ -68,7 +69,35 @@
   outline-color: var(--shortinfo-color) !important;
 }
 
+.clickable {
+  cursor: pointer !important;
+}
+.clickable:active {
+  opacity: 0.4 !important;
+}
 
+
+/* BULLET POINT ICON PICKER */
+
+#bullet-point-icon-picker {
+  position: absolute;
+  padding: 1em;
+  height: fit-content;
+  width: fit-content;
+  background-color: var(--shortinfo-color);
+  z-index: 1;
+  border-radius: 0.5em;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
+  box-shadow: 0 0.125em 0.375em -0.05em var(--shadowColor);
+}
+
+.bullet-point-showcase {
+  height: 2em;
+  width: 2em;
+  filter: invert(1);
+}
 
 /* IMAGE PICKER */
 

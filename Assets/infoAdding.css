@@ -17,16 +17,25 @@
 
 
 .titleAdderInput {
+    font-family: 'Bebas Neue', 'Roboto', Arial, Helvetica, sans-serif;
+
+}
+
+.bulletPointAdderInput {
+    font-weight: 600;
+    font-family: 'Roboto';
+}
+
+.inputField {
     display: block;
     height: auto;
     width: fit-content;
     padding: 0.5em;
-    cursor: pointer;
+    cursor: text;
     border-radius: 0.25em;
     text-align: center;
     justify-content: center;
     font-weight: 500;
-    font-family: 'Bebas Neue', 'Roboto', Arial, Helvetica, sans-serif;
     user-select: none;
     font-size: 22px;
 
@@ -39,7 +48,6 @@
     height: auto;
     width: fit-content;
     padding: 1em;
-    cursor: pointer;
     border-radius: 0.5em;
     text-align: center;
     justify-content: center;

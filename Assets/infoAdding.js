@@ -44,7 +44,10 @@ function InputField(_className, _defValue, _invert)
     return inputfield;
 }
 
+function insertBulletPoint(_parent)
+{
 
+}
 
 
 
@@ -72,12 +75,12 @@ shortBox.append(shortBoxTitleAdderHolder);
 
 
 // Input Field
-let shortBoxTitleAdder = InputField("titleAdderInput dark-trans", "Section Title", false)
+let shortBoxTitleAdder = InputField("titleAdderInput inputField dark-trans", "Section Title", false)
 shortBoxTitleAdderHolder.append(shortBoxTitleAdder);
 
 
 // Adding Button
-let shortBoxTitleAdderButton = TextObject("infoAddButton dark-trans", "Add Title", false)
+let shortBoxTitleAdderButton = TextObject("infoAddButton dark-trans clickable", "Add Title", false)
 shortBoxTitleAdderButton.onclick = () => {
     insertInformationTitle(shortBoxTitleAdder.value, shortinfContainer);
 };
@@ -89,21 +92,103 @@ shortBoxTitleAdderHolder.append(shortBoxTitleAdderButton);
 let shortBoxSepLineHolder = MultiContainer();
 
 // Adding Button
-let shortBoxSeperationLineAdder = TextObject("infoAddButton dark-trans", "Add seperation line", false)
+let shortBoxSeperationLineAdder = TextObject("infoAddButton dark-trans clickable", "Add seperation line", false)
 shortBoxSeperationLineAdder.onclick = () => {
     insertSeperationLine(shortinfContainer);
 };
 shortBoxSepLineHolder.append(shortBoxSeperationLineAdder);
 
-
-// input field with button and image icon picker
-// add bullet point
-
-
-
-
 shortBox.append(shortBoxSepLineHolder);
+
+
+
+
+
+
+
+let shortBoxBulletPointShowcase = document.createElement("div");
+shortBox.append(shortBoxBulletPointShowcase);
+let shortBoxBulletPointHolder = MultiContainer();
+// input field with button and image icon picker
+
+
+// icon selection
+let icons = [
+    "checkmark",
+    "address",
+    "location",
+    "website",
+    "globe",
+    "phone",
+    "phone_touch",
+    "email",
+    "mail",
+]
+let chosenBulletPoint = icons[0];
+
+let bulletPointIcon = document.createElement("img");
+bulletPointIcon.src = "Assets/icon_checkmark.png";
+bulletPointIcon.className = "bullet-point-showcase clickable";
+bulletPointIcon.onclick = () => {
+    bulletPointPicker.style.display = "flex";
+}
+
+
+shortBoxBulletPointHolder.append(bulletPointIcon);
+
+let bulletPointPicker = MultiContainer();
+bulletPointPicker.id = "bullet-point-icon-picker";
+bulletPointPicker.style.display = "none";
+
+for (let i = 0; i < icons.length; i++) {
+    let newIcon = document.createElement("img");
+    newIcon.src = `Assets/icon_${icons[i]}.png`
+    newIcon.className = "bullet-point-showcase clickable";
+    newIcon.onclick = () => {
+        bulletPointIcon.src = newIcon.src;
+        chosenBulletPoint = icons[i];
+        bulletPointPicker.style.display = "none";
+    }
+    bulletPointPicker.append(newIcon);
+}
+
+
+shortBoxBulletPointHolder.append(bulletPointPicker);
+
+// text input field
+let shortBoxBulletPointInput = InputField("bulletPointAdderInput inputField dark-trans", "Bullet Point", false);
+shortBoxBulletPointHolder.append(shortBoxBulletPointInput);
+
+// adding button
+let shortBoxBulletPointAdder = TextObject("infoAddButton dark-trans clickable", "Add bullet point", false)
+shortBoxBulletPointAdder.onclick = () => {
+    addLineToShortinfoArray(chosenBulletPoint, shortBoxBulletPointInput.value, true);
+    appendShortInfoToParent(shortBoxBulletPointShowcase, {iconname:chosenBulletPoint, text:shortBoxBulletPointInput.value, invert:true});
+};
+shortBoxBulletPointHolder.append(shortBoxBulletPointAdder);
+
+shortBox.append(shortBoxBulletPointHolder);
+
+
+
+
+
+// submit button
+let shortBoxSubmitButtonHolder = MultiContainer();
+let shortBoxBulletPointSubmitter = TextObject("infoAddButton dark-trans clickable", "Submit category", false)
+shortBoxBulletPointSubmitter.onclick = () => {
+    appendShortInfo();
+    shortBoxBulletPointShowcase.innerHTML = "";
+};
+
+shortBoxSubmitButtonHolder.append(shortBoxBulletPointSubmitter);
+
+shortBox.append(shortBoxSubmitButtonHolder);
+
+
+
 columnHolder.append(shortBox);
+
 // ------------------------------------------------------------------
 // ------------------------------------------------------------------
 
@@ -125,12 +210,12 @@ infBox.append(infBoxTitleAdderHolder);
 
 
 // Input Field
-let infBoxTitleAdder = InputField("titleAdderInput light-trans", "Section Title", true)
+let infBoxTitleAdder = InputField("titleAdderInput inputField light-trans", "Section Title", true)
 infBoxTitleAdderHolder.append(infBoxTitleAdder);
 
 
 // Adding Button
-let infBoxTitleAdderButton = TextObject("infoAddButton light-trans", "Add Title", true)
+let infBoxTitleAdderButton = TextObject("infoAddButton light-trans clickable", "Add Title", true)
 infBoxTitleAdderButton.onclick = () => {
     insertInformationTitle(infBoxTitleAdder.value, infContainer);
 };
@@ -141,7 +226,7 @@ infBoxTitleAdderHolder.append(infBoxTitleAdderButton);
 let infBoxSepLineHolder = MultiContainer();
 
 // Adding Button
-let infBoxSeperationLineAdder = TextObject("infoAddButton light-trans", "Add seperation line", true)
+let infBoxSeperationLineAdder = TextObject("infoAddButton light-trans clickable", "Add seperation line", true)
 infBoxSeperationLineAdder.onclick = () => {
     insertSeperationLine(infContainer);
 };

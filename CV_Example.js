@@ -12,50 +12,44 @@ setOnelinerText("Lorem ipsum dolor sit amet, consectetur\ncommodo consequat");
 
 // bullet point information
 
-insertShortInfo([
-    {iconname:"website",text:"Portfolio: a1creator.com", link:"https://a1creator.com",invert:true},
-]);
+addLineToShortinfoArray("website", "Portfolio: a1creator.com", true, "https://a1creator.com");
+appendShortInfo();
 
 insertInformationTitle("Contact", shortinfContainer);
 
 insertSeperationLine(shortinfContainer);
 
-insertShortInfo([
-    {iconname:"phone",text:"+XX XXX XXX XXXX",invert:true},
-    {iconname:"location",text:"Location, Country",invert:true},
-    {iconname:"email",text:"professional@gmail.com",invert:true},
-]);
+addLineToShortinfoArray("phone", "+XX XXX XXX XXXX", true);
+addLineToShortinfoArray("location", "Location, Country", true);
+addLineToShortinfoArray("email", "professional@gmail.com", true);
+appendShortInfo();
 
 insertInformationTitle("Skills", shortinfContainer);
 
 insertSeperationLine(shortinfContainer);
 
-insertShortInfo([
-    {iconname:"address",text:"Skill 1",invert:true},
-    {iconname:"mail",text:"Skill 2",invert:true},
-    {iconname:"checkmark",text:"Skill 3",invert:true},
-    {iconname:"checkmark",text:"Skill 4",invert:true},
-]);
+addLineToShortinfoArray("checkmark", "Skill 1", true);
+addLineToShortinfoArray("checkmark", "Skill 2", true);
+addLineToShortinfoArray("checkmark", "Skill 3", true);
+addLineToShortinfoArray("checkmark", "Skill 4", true);
+appendShortInfo();
 
 insertInformationTitle("Languages", shortinfContainer);
 
 insertSeperationLine(shortinfContainer);
 
-insertShortInfo([
-    {iconname:"checkmark",text:"C#",invert:true},
-    {iconname:"checkmark",text:"C++",invert:true},
-    {iconname:"checkmark",text:"python",invert:true},
-    {iconname:"checkmark",text:"Javascript",invert:true},
-    {iconname:"checkmark",text:"HTML & CSS",invert:true},
-]);
+addLineToShortinfoArray("checkmark", "C#", true);
+addLineToShortinfoArray("checkmark", "C++", true);
+addLineToShortinfoArray("checkmark", "python", true);
+addLineToShortinfoArray("checkmark", "Javascript", true);
+addLineToShortinfoArray("checkmark", "HTML & CSS", true);
+appendShortInfo();
 
-insertShortInfo([
-    // insert your own flags or remove this part if you're american
-    {iconname:"flag_eng",text:"Native"},
-    //{iconname:"flag_COUNTRYCODE1",text:"Native"},
-    //{iconname:"flag_COUNTRYCODE2",text:"Fluent"},
-    //{iconname:"flag_COUNTRYCODE3",text:"Fluent"},
-]);
+
+addLineToShortinfoArray("flag_eng", "Native", false);
+appendShortInfo();
+
+
 
 // profile
 insertInformationTitle("Profile", infContainer);
