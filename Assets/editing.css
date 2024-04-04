@@ -86,9 +86,17 @@
 .clickable:active {
   opacity: 0.4 !important;
 }
+.replaceable-img {
+  cursor: pointer !important;
+}
+.replaceable-img:active {
+  opacity: 0.4 !important;
+}
 
 .selected-editable {
   opacity: 0.5;
+  overflow: visible;
+  overflow-clip-margin: unset;
   position: relative;
 }
 
@@ -99,19 +107,19 @@
   padding: 1em;
   height: fit-content;
   width: fit-content;
-  background-color: var(--shortinfo-color);
+  background-color: #FF5599;
   z-index: 1;
   border-radius: 0.5em;
   top: 0;
   left: 0;
-  transform: translateY(-100%);
+  transform: translateY(-50%);
   box-shadow: 0 0.125em 0.375em -0.05em var(--shadowColor);
 }
 
 .bullet-point-showcase {
   height: 2em;
   width: 2em;
-  filter: invert(1);
+  filter: invert(0.95);
 }
 
 /* IMAGE PICKER */

@@ -1,5 +1,4 @@
 
-const shortinfContainer = document.getElementById("shortinf-container");
 
 var infosarray = []
 
@@ -26,14 +25,14 @@ function appendShortInfo()
 
         // icon
         let _icon = document.createElement("img");
-        _icon.className = "short-inf-icon";
+        _icon.className = "short-inf-icon replaceable-img";
         _icon.src = `Assets/icon_${infosarray[i].iconname}.png`;
         if (infosarray[i].invert)
             _icon.classList.add("invert-icon");
 
         // text
         let _text = document.createElement("div");
-        _text.className = "inf-font short-inf editable";
+        _text.className = "inf-font short-inf editable-text";
         _text.innerText = infosarray[i].text;
         if (infosarray[i].link != null)
         {

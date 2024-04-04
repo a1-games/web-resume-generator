@@ -1,4 +1,4 @@
-let editingContainer = document.getElementById("resume-editing-container");
+
 
 
 /* SLIDERS */
@@ -11,7 +11,7 @@ let sliderDataObjs = [
     },
     {
         name:"shortinf",
-        info:"Short Information",
+        info:"Bullet Points",
         sliderProperties:{min:0.125, max:3,step:0.125, defVal:1.25, unit:"rem"},
         changeSizeProperty:(value)=>{document.documentElement.style.setProperty(`--fontsize-shortinfo`, `${value}rem`)},
     },
@@ -24,41 +24,46 @@ let sliderDataObjs = [
 ]
 
 
-var sliders = [];
-
-
-
-for (let i = 0; i < sliderDataObjs.length; i++) {
+function addSlider(sliderDataObj, parentElem)
+{
     let sliderbox = document.createElement("div");
-    sliderbox.className = "editing-container footspace";
+    sliderbox.className = "editing-container";
+    sliderbox.style.width = "100%";
 
     let title = document.createElement("div");
     title.className = "editing-title";
-    title.id = `${sliderDataObjs[i].name}-title`;
-    title.innerText = `${sliderDataObjs[i].info} font-size: ${sliderDataObjs[i].sliderProperties.defVal}${sliderDataObjs[i].sliderProperties.unit}`;
+    title.id = `${sliderDataObj.name}-title`;
+    title.innerText = `${sliderDataObj.info} font-size: ${sliderDataObj.sliderProperties.defVal}${sliderDataObj.sliderProperties.unit}`;
 
     let inputSlider = document.createElement("input");
     inputSlider.className = "fontsize-slider";
-    inputSlider.id = `${sliderDataObjs[i].name}-slider`;
+    inputSlider.id = `${sliderDataObj.name}-slider`;
     inputSlider.type = "range";
-    inputSlider.min = sliderDataObjs[i].sliderProperties.min;
-    inputSlider.max = sliderDataObjs[i].sliderProperties.max;
-    inputSlider.step = sliderDataObjs[i].sliderProperties.step;
-    inputSlider.value = sliderDataObjs[i].sliderProperties.defVal;
+    inputSlider.min = sliderDataObj.sliderProperties.min;
+    inputSlider.max = sliderDataObj.sliderProperties.max;
+    inputSlider.step = sliderDataObj.sliderProperties.step;
+    inputSlider.value = sliderDataObj.sliderProperties.defVal;
     inputSlider.oninput = (e) => {
-        console.log(inputSlider.value);
-        title.innerText = `${sliderDataObjs[i].info} font-size: ${inputSlider.value}${sliderDataObjs[i].sliderProperties.unit}`;
-        sliderDataObjs[i].changeSizeProperty(inputSlider.value);
+        title.innerText = `${sliderDataObj.info} font-size: ${inputSlider.value}${sliderDataObj.sliderProperties.unit}`;
+        sliderDataObj.changeSizeProperty(inputSlider.value);
     };
 
     sliderbox.append(title);
     sliderbox.append(inputSlider);
 
-    sliders.push(inputSlider);
-    editingContainer.append(sliderbox);
+    parentElem.append(sliderbox);
 }
 
 
+
+addSlider(sliderDataObjs[0], editingContainer);
+
+let doublefontsliderRow = MultiContainer(true);
+
+addSlider(sliderDataObjs[1], doublefontsliderRow);
+addSlider(sliderDataObjs[2], doublefontsliderRow);
+
+editingContainer.append(doublefontsliderRow);
 
 
 

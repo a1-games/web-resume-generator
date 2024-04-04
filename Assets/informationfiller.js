@@ -1,6 +1,4 @@
 
-const infContainer = document.getElementById("inf-container");
-const profileInfContainer = document.getElementById("profile-inf-aligner");
 
 function insertInformationTitle(title, container)
 {
@@ -27,22 +25,22 @@ function insertInformation(datetime, location, title, text)
 
     // timedate
     let _time = document.createElement("div");
-    _time.className = "inf-font inf-datetime editable";
+    _time.className = "inf-font inf-datetime editable-text";
     _time.innerText = datetime;
 
     // location
     let _location = document.createElement("div");
-    _location.className = "inf-font inf-location editable";
+    _location.className = "inf-font inf-location editable-text";
     _location.innerText = location;
     
     // title
     let _title = document.createElement("div");
-    _title.className = "inf-font inf-title editable";
+    _title.className = "inf-font inf-title editable-text";
     _title.innerText = title;
 
     // description text
     let _text = document.createElement("div");
-    _text.className = "inf-font inf-text editable";
+    _text.className = "inf-font inf-text editable-text";
     _text.innerText = text;
 
     
@@ -62,7 +60,7 @@ function insertText(text, container)
 
     // description text
     let _text = document.createElement("div");
-    _text.className = "inf-font inf-text editable";
+    _text.className = "inf-font inf-text editable-text";
     _text.innerText = text;
     newContainer.append(_text);
     

@@ -74,6 +74,8 @@
     flex-direction: row;
     align-items: center;
     z-index: 1;
+
+    overflow: visible;
 }
 
 .short-inf-background-image {

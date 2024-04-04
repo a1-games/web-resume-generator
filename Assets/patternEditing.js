@@ -5,7 +5,6 @@
 
 
 /* IMAGE PICKER */
-let patternCirclesParent = document.getElementById("pattern-circles-container");
 
 let selectedPCircle = null;
 

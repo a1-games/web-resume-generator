@@ -35,7 +35,12 @@ html, body {
 }
 
 #pi-container {
-    margin: 0 auto;
+    margin: 1em auto;
+}
+
+#pi-headline {
+    margin: 0;
+    justify-content: baseline;
 }
 
 #pi-headshot {

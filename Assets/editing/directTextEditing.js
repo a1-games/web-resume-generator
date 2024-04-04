@@ -17,8 +17,9 @@ de_InputField.style.display = "none";
 
 function SelectTextToEdit(element)
 {
-    element.classList.add("selected-editable");
     selectedEditableText = element;
+
+    selectedEditableText.classList.add("selected-editable");
     selectedEditableText.append(de_InputField);
     
     de_InputField.style.display = "block";
@@ -32,7 +33,7 @@ function SelectTextToEdit(element)
 
 
 addEventListener("click", (e) => {
-    if (e.target.className.includes("editable"))
+    if (e.target.className.includes("editable-text"))
     {
         SelectTextToEdit(e.target);
     }
