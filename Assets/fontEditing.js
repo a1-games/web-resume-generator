@@ -24,10 +24,10 @@ let sliderDataObjs = [
 ]
 
 
-function addSlider(sliderDataObj, parentElem)
+function addSlider(sliderDataObj, parentElem, footspace = false)
 {
     let sliderbox = document.createElement("div");
-    sliderbox.className = "editing-container";
+    sliderbox.className = `editing-container ${footspace? "footspace" : ""}`;
     sliderbox.style.width = "100%";
 
     let title = document.createElement("div");
@@ -55,10 +55,15 @@ function addSlider(sliderDataObj, parentElem)
 }
 
 
+let globalfontsliderRow = MultiContainer("editing-container footspace");
 
-addSlider(sliderDataObjs[0], editingContainer);
+addSlider(sliderDataObjs[0], globalfontsliderRow);
 
-let doublefontsliderRow = MultiContainer(true);
+editingContainer.append(globalfontsliderRow);
+
+
+
+let doublefontsliderRow = MultiContainer("editing-container footspace");
 
 addSlider(sliderDataObjs[1], doublefontsliderRow);
 addSlider(sliderDataObjs[2], doublefontsliderRow);

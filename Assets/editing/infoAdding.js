@@ -85,8 +85,9 @@ let shortBoxBulletPointHolder = MultiContainer();
 let bulletPointIcon = document.createElement("img");
 bulletPointIcon.src = "Assets/icon_checkmark.png";
 bulletPointIcon.className = "bullet-point-showcase clickable replaceable-img";
+// choosing the icon is handled by directImageReplacing
 bulletPointIcon.onclick = () => {
-    bulletPointPicker.style.display = "flex";
+    bulletPointIsBeingSelected = true;
 }
 
 shortBoxBulletPointHolder.append(bulletPointIcon);
@@ -99,8 +100,8 @@ shortBoxBulletPointHolder.append(shortBoxBulletPointInput);
 // adding button
 let shortBoxBulletPointAdder = TextObject("infoAddButton dark-trans clickable", "Add bullet point", false)
 shortBoxBulletPointAdder.onclick = () => {
-    addLineToShortinfoArray(chosenBulletPoint, shortBoxBulletPointInput.value, true);
-    appendShortInfoToParent(shortBoxBulletPointShowcase, {iconname:chosenBulletPoint, text:shortBoxBulletPointInput.value, invert:true});
+    addLineToShortinfoArray(selectedBulletPointName, shortBoxBulletPointInput.value, true);
+    appendShortInfoToParent(shortBoxBulletPointShowcase, {iconname:selectedBulletPointName, text:shortBoxBulletPointInput.value, invert:true});
 };
 shortBoxBulletPointHolder.append(shortBoxBulletPointAdder);
 

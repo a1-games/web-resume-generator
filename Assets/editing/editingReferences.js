@@ -15,10 +15,10 @@ const patternCirclesParent = document.getElementById("pattern-circles-container"
 
 
 // FUNCTIONS
-function MultiContainer(_footspace = true)
+function MultiContainer(additionalClasses)
 {
     let multicon = document.createElement("div");
-    multicon.className = `multi-item-container ${_footspace ? "footspace" : ""}`;
+    multicon.className = `multi-item-container ` + additionalClasses;
     return multicon;
 }
 

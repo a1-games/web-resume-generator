@@ -1,0 +1,11 @@
+
+
+add self-upload to bullet point icon switcher
+
+add "clickable link" toggle to bullet point maker
+
+
+delete buttons for bullet points, bullet point sections, information sections, titles, lines, etc.
+
+
+
