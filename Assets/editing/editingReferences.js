@@ -15,7 +15,7 @@ const patternCirclesParent = document.getElementById("pattern-circles-container"
 
 
 // FUNCTIONS
-function MultiContainer(additionalClasses)
+function MultiContainer(additionalClasses = "")
 {
     let multicon = document.createElement("div");
     multicon.className = `multi-item-container ` + additionalClasses;
