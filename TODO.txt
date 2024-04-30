@@ -9,3 +9,4 @@ delete buttons for bullet points, bullet point sections, information sections, t
 
 
 
+add paragraph adding for information column

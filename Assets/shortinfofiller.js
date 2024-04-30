@@ -7,6 +7,11 @@ function addLineToShortinfoArray(_iconname, _text, _invertImage, _link = null)
     infosarray.push({iconname:_iconname, text:_text, invert:_invertImage, link:_link});
 }
 
+
+
+// each line should show a delete button on hover, and the holder itself should have a '+' button to add another line
+
+
 function appendShortInfo()
 {
     // information container

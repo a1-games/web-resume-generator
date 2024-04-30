@@ -66,9 +66,9 @@
         <div id="resume-editing-container">
 
             <!-- Image and Color picker -->
-            <div class="editing-container footspace">
+            <div class="editing-container footspace pagewidth">
                 <div class=" multi-item-container" style="min-height: fit-content;">
-                    <div id="shortinfo-preview"  class="short-inf-container editing-container" style="flex: 1; flex-direction: column; display: flex;"> 
+                    <div id="shortinfo-preview"  class="short-inf-container editing-container" style=" flex-direction: column; display: flex;"> 
                         <div class="short-inf-background-image"></div>
                         <div class="blackdrop"></div>
                         <div class="short-inf-line"  style=" font-size: var(--fontsize-shortinfo);">
@@ -85,7 +85,7 @@
                         </div>
                     </div>
                     
-                    <div class=" editing-container multi-item-container " style="display: flexbox; margin: 0; flex: 1;">
+                    <div class=" editing-container multi-item-container " style="display: flex; margin: 0;">
                         <input id="edit-color-picker" type="color" value="#10C838" class="circle-option">
                         <div class="editing-title">
                             Select Primary Colour
@@ -99,11 +99,13 @@
                     <div class="editing-title">
                         Select Background Pattern
                     </div>
-                    <div id="pattern-circles-container" class="multi-item-container" style="margin: 0;">
-                        <label for="edit-image-picker">
-                            <div class="circle-option editing-title clickable" style="background-color: #FFFFFF11; margin: 0;"> Upload </div>
-                        </label>
-                        <input id="edit-image-picker" type="file" accept="image/*" value="" style="display: none;">
+                    <div id="pattern-circles-scroller">
+                        <div id="pattern-circles-container" class="multi-item-container" style="margin: 0; padding: 4px;">
+                            <label for="edit-image-picker">
+                                <div class="circle-option editing-title clickable" style="background-color: #FFFFFF11; margin: 0;"> Upload </div>
+                            </label>
+                            <input id="edit-image-picker" type="file" accept="image/*" value="" style="display: none;">
+                        </div>
                     </div>
                 </div>
             </div>

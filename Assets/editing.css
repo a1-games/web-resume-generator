@@ -34,15 +34,18 @@
   margin: auto;
 }
 
-.footspace {
+.pagewidth {
   width: 80% !important;
+}
+
+.footspace {
   margin-bottom: 1em !important;
 }
 
 .multi-item-container {
   position: relative;
   display: flex;
-  min-width: fit-content;
+  width: fit-content;
   gap: 1em;
   margin: auto;
   flex-shrink: 0;
@@ -62,6 +65,11 @@
   line-height: 4em;
 }
 
+#pattern-circles-scroller {
+  overflow-y: visible;
+  overflow-x: auto;
+  
+}
 
 .editing-title {
   text-align: center;

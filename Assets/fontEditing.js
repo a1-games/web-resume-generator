@@ -55,7 +55,7 @@ function addSlider(sliderDataObj, parentElem, footspace = false)
 }
 
 
-let globalfontsliderRow = MultiContainer("editing-container footspace");
+let globalfontsliderRow = MultiContainer("editing-container footspace pagewidth");
 
 addSlider(sliderDataObjs[0], globalfontsliderRow);
 
@@ -63,7 +63,7 @@ editingContainer.append(globalfontsliderRow);
 
 
 
-let doublefontsliderRow = MultiContainer("editing-container footspace");
+let doublefontsliderRow = MultiContainer("editing-container footspace pagewidth");
 
 addSlider(sliderDataObjs[1], doublefontsliderRow);
 addSlider(sliderDataObjs[2], doublefontsliderRow);

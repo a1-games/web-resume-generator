@@ -5,7 +5,7 @@
 
 // Parent for the whole thing
 let columnHolder = document.createElement("div");
-columnHolder.className = "multi-item-container editing-container footspace";
+columnHolder.className = "multi-item-container editing-container footspace pagewidth";
 
 
 
@@ -37,21 +37,16 @@ shortBox.className = "editing-container";
 shortBox.id = "shortinfo-adder";
 shortBox.style.flexGrow = 1;
 
-let shortBoxTitle = TextObject("editing-title", "Bullet Points", true)
+let shortBoxTitle = TextObject("editing-title footspace", "Bullet Points", true)
 shortBox.append(shortBoxTitle);
 
 // TITLE
-let shortBoxTitleAdderHolder = MultiContainer();
+let shortBoxTitleAdderHolder = MultiContainer("footspace");
 shortBox.append(shortBoxTitleAdderHolder);
 
 
-// Input Field
-let shortBoxTitleAdder = InputField("titleAdderInput inputField dark-trans", "Section Title", false)
-shortBoxTitleAdderHolder.append(shortBoxTitleAdder);
-
-
 // Adding Button
-let shortBoxTitleAdderButton = TextObject("infoAddButton dark-trans clickable", "Add Title", false)
+let shortBoxTitleAdderButton = TextObject("infoAddButton dark-trans clickable titleFont", "Add Title", false)
 shortBoxTitleAdderButton.onclick = () => {
     insertInformationTitle(shortBoxTitleAdder.value, shortinfContainer);
 };
@@ -60,7 +55,10 @@ shortBoxTitleAdderHolder.append(shortBoxTitleAdderButton);
 
 
 // SEPERATION LINE
-let shortBoxSepLineHolder = MultiContainer();
+let shortBoxSepLineHolder = MultiContainer("footspace");
+shortBoxSepLineHolder.style.width = "fit-content";
+shortBox.append(shortBoxSepLineHolder);
+
 
 // Adding Button
 let shortBoxSeperationLineAdder = TextObject("infoAddButton dark-trans clickable", "Add seperation line", false)
@@ -69,59 +67,29 @@ shortBoxSeperationLineAdder.onclick = () => {
 };
 shortBoxSepLineHolder.append(shortBoxSeperationLineAdder);
 
-shortBox.append(shortBoxSepLineHolder);
 
 
 
 
 
-
+// BULLET POINT ADDER
 
 let shortBoxBulletPointShowcase = document.createElement("div");
 shortBox.append(shortBoxBulletPointShowcase);
-let shortBoxBulletPointHolder = MultiContainer();
+let shortBoxBulletPointHolder = MultiContainer("footspace");
 // input field with button and image icon picker
 
-let bulletPointIcon = document.createElement("img");
-bulletPointIcon.src = "Assets/icon_checkmark.png";
-bulletPointIcon.className = "bullet-point-showcase clickable replaceable-img";
-// choosing the icon is handled by directImageReplacing
-bulletPointIcon.onclick = () => {
-    bulletPointIsBeingSelected = true;
-}
-
-shortBoxBulletPointHolder.append(bulletPointIcon);
-
-
-// text input field
-let shortBoxBulletPointInput = InputField("bulletPointAdderInput inputField dark-trans", "Bullet Point", false);
-shortBoxBulletPointHolder.append(shortBoxBulletPointInput);
-
 // adding button
-let shortBoxBulletPointAdder = TextObject("infoAddButton dark-trans clickable", "Add bullet point", false)
+let shortBoxBulletPointAdder = TextObject("infoAddButton dark-trans clickable", "Add bullet point holder", false)
 shortBoxBulletPointAdder.onclick = () => {
-    addLineToShortinfoArray(selectedBulletPointName, shortBoxBulletPointInput.value, true);
-    appendShortInfoToParent(shortBoxBulletPointShowcase, {iconname:selectedBulletPointName, text:shortBoxBulletPointInput.value, invert:true});
+    appendShortInfo();
+    //addLineToShortinfoArray(selectedBulletPointName, "Bullet Point", true);
+    //appendShortInfoToParent(shortBoxBulletPointShowcase, {iconname:selectedBulletPointName, text:"Bullet Point", invert:true});
 };
 shortBoxBulletPointHolder.append(shortBoxBulletPointAdder);
 
 shortBox.append(shortBoxBulletPointHolder);
 
-
-
-
-
-// submit button
-let shortBoxSubmitButtonHolder = MultiContainer();
-let shortBoxBulletPointSubmitter = TextObject("infoAddButton dark-trans clickable", "Submit category", false)
-shortBoxBulletPointSubmitter.onclick = () => {
-    appendShortInfo();
-    shortBoxBulletPointShowcase.innerHTML = "";
-};
-
-shortBoxSubmitButtonHolder.append(shortBoxBulletPointSubmitter);
-
-shortBox.append(shortBoxSubmitButtonHolder);
 
 
 

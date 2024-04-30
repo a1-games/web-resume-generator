@@ -3,19 +3,37 @@
 
 
 // PRINT PAGE BUTTON
-let buttonContainer =   document.createElement("a");
-buttonContainer.className = "editing-container footspace clickable";
-buttonContainer.style.backgroundColor = "var(--shortinfo-color)";
-buttonContainer.style.display = "block";
-buttonContainer.onclick = () => {
+let printbuttonContainer =   document.createElement("a");
+printbuttonContainer.className = "editing-container footspace pagewidth clickable";
+printbuttonContainer.style.backgroundColor = "var(--shortinfo-color)";
+printbuttonContainer.style.display = "block";
+printbuttonContainer.onclick = () => {
     print();
 };
 
-let downloadButton = document.createElement("a");
-downloadButton.id ="pi-cv-link";
-downloadButton.innerText = "Click to view or download as .pdf"
+let printdownloadButton = document.createElement("a");
+printdownloadButton.id ="pi-cv-link";
+printdownloadButton.innerText = "Click to view, print or download as .pdf"
 
-buttonContainer.append(downloadButton);
-editingContainer.append(buttonContainer);
+printbuttonContainer.append(printdownloadButton);
+editingContainer.append(printbuttonContainer);
 
 
+// DOWNLOAD HTML PAGE
+
+
+
+let htmlbuttonContainer =   document.createElement("a");
+htmlbuttonContainer.className = "editing-container footspace pagewidth clickable";
+htmlbuttonContainer.style.backgroundColor = "var(--shortinfo-color)";
+htmlbuttonContainer.style.display = "block";
+htmlbuttonContainer.onclick = () => {
+    
+};
+
+let htmldownloadButton = document.createElement("a");
+htmldownloadButton.id ="pi-cv-link";
+htmldownloadButton.innerText = "Click to download as html for your own website"
+
+htmlbuttonContainer.append(htmldownloadButton);
+editingContainer.append(htmlbuttonContainer);

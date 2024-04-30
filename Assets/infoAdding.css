@@ -16,9 +16,9 @@
 }
 
 
-.titleAdderInput {
+.titleFont {
     font-family: 'Bebas Neue', 'Roboto', Arial, Helvetica, sans-serif;
-
+    font-size: 2em;
 }
 
 .bulletPointAdderInput {
@@ -29,7 +29,7 @@
 .inputField {
     display: block;
     height: auto;
-    width: fit-content;
+    width: 8em;
     padding: 0.5em;
     cursor: text;
     border-radius: 0.25em;
@@ -47,7 +47,7 @@
     display: block;
     height: auto;
     width: fit-content;
-    padding: 1em;
+    padding: 0.5em 1em;
     border-radius: 0.5em;
     text-align: center;
     justify-content: center;
