@@ -30,6 +30,13 @@ html, body {
     display: none;
 }
 
+.removal-button-small {
+    display: none;
+}
+.adding-button-small {
+    display: none;
+}
+
 #profile-text {
     text-align: left;
 }

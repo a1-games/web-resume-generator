@@ -60,6 +60,7 @@
 }
 
 .short-inf-icon {
+    position: relative;
     width: auto;
     height: 1.2rem;
     margin-right: 0.5rem;
@@ -70,6 +71,7 @@
 }
 
 .short-inf-line{
+    position: relative;
     display: inline-flex;
     flex-direction: row;
     align-items: center;

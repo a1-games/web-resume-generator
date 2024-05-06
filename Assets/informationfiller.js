@@ -27,21 +27,25 @@ function insertInformation(datetime, location, title, text)
     let _time = document.createElement("div");
     _time.className = "inf-font inf-datetime editable-text";
     _time.innerText = datetime;
+    createRemovalButton(_time, _time)
 
     // location
     let _location = document.createElement("div");
     _location.className = "inf-font inf-location editable-text";
     _location.innerText = location;
+    createRemovalButton(_location, _location)
     
     // title
     let _title = document.createElement("div");
     _title.className = "inf-font inf-title editable-text";
     _title.innerText = title;
+    createRemovalButton(_title, _title)
 
     // description text
     let _text = document.createElement("div");
     _text.className = "inf-font inf-text editable-text";
     _text.innerText = text;
+    createRemovalButton(_text, _text)
 
     
     newContainer.append(_time);
@@ -49,6 +53,8 @@ function insertInformation(datetime, location, title, text)
     newContainer.append(_title);
     newContainer.append(_text);
     
+    createRemovalButton(newContainer, newContainer)
+
     infContainer.append(newContainer);
 }
 
@@ -62,7 +68,11 @@ function insertText(text, container)
     let _text = document.createElement("div");
     _text.className = "inf-font inf-text editable-text";
     _text.innerText = text;
+    createRemovalButton(_text, _text)
+    
     newContainer.append(_text);
+
+    createRemovalButton(newContainer, newContainer)
     
     container.append(newContainer);
 }

@@ -9,6 +9,11 @@ de_InputField.onblur = () => {
     body.append(de_InputField);
     selectedEditableText.innerText = de_InputField.value;
     selectedEditableText.classList.remove("selected-editable");
+    // replace the removal button if not header
+    if (selectedEditableText.className.includes("inf-font"))
+    {
+        createRemovalButton(selectedEditableText, selectedEditableText)
+    }
     selectedEditableText = null;
     de_InputField.style.display = "none";
 }

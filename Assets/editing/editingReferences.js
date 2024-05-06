@@ -43,3 +43,16 @@ function InputField(_className, _defValue, _invert)
     };
     return inputfield;
 }
+
+function createRemovalButton(itemToRemove, parent)
+{
+    let remBut = document.createElement("div");
+    remBut.className = "clickable removal-button-small";
+
+    remBut.onclick = () => {
+        // remove
+        itemToRemove.remove();
+    }
+
+    parent.append(remBut);
+}

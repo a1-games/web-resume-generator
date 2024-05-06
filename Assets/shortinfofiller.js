@@ -12,6 +12,7 @@ function addLineToShortinfoArray(_iconname, _text, _invertImage, _link = null)
 // each line should show a delete button on hover, and the holder itself should have a '+' button to add another line
 
 
+
 function appendShortInfo()
 {
     // information container
@@ -52,11 +53,15 @@ function appendShortInfo()
         _line.append(_text);
 
         newContainer.append(_line);
+        createRemovalButton(_line, _line)
     }
 
     // clear the array
     infosarray = [];
     
+    // editing buttons
+    createRemovalButton(newContainer, newContainer)
+
     shortinfContainer.append(newContainer);
 }
 
@@ -92,6 +97,7 @@ function appendShortInfoToParent(_parentContainer, shortInfoObj)
     _line.append(_text);
 
     newContainer.append(_line);
+    
 
     
     _parentContainer.append(newContainer);

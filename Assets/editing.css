@@ -71,6 +71,10 @@
   
 }
 
+.editable-text {
+  position: relative;
+}
+
 .editing-title {
   text-align: center;
   margin: 0.5em;
@@ -107,6 +111,32 @@
   overflow-clip-margin: unset;
   position: relative;
 }
+
+/* ADDING AND REMOVAL BUTTONS */
+
+.removal-button-small {
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  height: 1em;
+  width: 1em;
+
+  background-color: #ff0000;
+}
+
+.adding-button-small {
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  height: 1em;
+  width: 1em;
+
+  background-color: #00ff62;
+}
+
+
 
 /* BULLET POINT ICON PICKER */
 
