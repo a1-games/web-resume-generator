@@ -116,24 +116,41 @@
 
 .removal-button-small {
   position: absolute;
-  right: 0;
+  left: 0;
   top: 0;
 
-  height: 1em;
-  width: 1em;
+  height: 0.7em;
+  width: 0.7em;
 
-  background-color: #ff0000;
+  background-image: url('x.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.translate-middle {
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+}
+.translate-middle-vertical {
+  top: 50% !important;
+  left: 100% !important;
+  transform: translate(-100%, -50%) !important;
 }
 
 .adding-button-small {
   position: absolute;
-  right: 0;
-  top: 0;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 0);
 
   height: 1em;
   width: 1em;
 
-  background-color: #00ff62;
+  background-image: url('+.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 

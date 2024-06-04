@@ -48,7 +48,7 @@ shortBox.append(shortBoxTitleAdderHolder);
 // Adding Button
 let shortBoxTitleAdderButton = TextObject("infoAddButton dark-trans clickable titleFont", "Add Title", false)
 shortBoxTitleAdderButton.onclick = () => {
-    insertInformationTitle(shortBoxTitleAdder.value, shortinfContainer);
+    insertInformationTitle("TITLE", shortinfContainer);
 };
 shortBoxTitleAdderHolder.append(shortBoxTitleAdderButton);
 
@@ -105,23 +105,16 @@ infBox.className = "editing-container";
 infBox.id = "information-adder";
 infBox.style.flexGrow = 1;
 
-let infBoxTitle = TextObject("editing-title", "Information", false)
+let infBoxTitle = TextObject("editing-title footspace", "Information", false)
 infBox.append(infBoxTitle);
 
 
 
 // TITLE
-let infBoxTitleAdderHolder = MultiContainer();
+let infBoxTitleAdderHolder = MultiContainer("footspace");
 infBox.append(infBoxTitleAdderHolder);
-
-
-// Input Field
-let infBoxTitleAdder = InputField("titleAdderInput inputField light-trans", "Section Title", true)
-infBoxTitleAdderHolder.append(infBoxTitleAdder);
-
-
 // Adding Button
-let infBoxTitleAdderButton = TextObject("infoAddButton light-trans clickable", "Add Title", true)
+let infBoxTitleAdderButton = TextObject("infoAddButton light-trans clickable titleFont", "Add Title", true)
 infBoxTitleAdderButton.onclick = () => {
     insertInformationTitle(infBoxTitleAdder.value, infContainer);
 };
@@ -129,16 +122,27 @@ infBoxTitleAdderHolder.append(infBoxTitleAdderButton);
 
 
 // SEPERATION LINE
-let infBoxSepLineHolder = MultiContainer();
-
+let infBoxSepLineHolder = MultiContainer("footspace");
+infBox.append(infBoxSepLineHolder);
 // Adding Button
 let infBoxSeperationLineAdder = TextObject("infoAddButton light-trans clickable", "Add seperation line", true)
 infBoxSeperationLineAdder.onclick = () => {
     insertSeperationLine(infContainer);
 };
 infBoxSepLineHolder.append(infBoxSeperationLineAdder);
-infBox.append(infBoxSepLineHolder);
 
+
+
+
+// SEPERATION LINE
+let infBoxTextBoxHolder = MultiContainer("footspace");
+infBox.append(infBoxTextBoxHolder);
+// Adding Button
+let infBoxTextBoxAdder = TextObject("infoAddButton light-trans clickable", "Add text box", true)
+infBoxTextBoxAdder.onclick = () => {
+    insertInformation("2000 - 2010", "Location", "Subtitle", "Ut enim ad minima veniam, quis nostrum exercita tionem ullam corporis suscipit labo riosam, nisi ut aliquid ex ea commodi consequatur.");
+};
+infBoxTextBoxHolder.append(infBoxTextBoxAdder);
 
 
 

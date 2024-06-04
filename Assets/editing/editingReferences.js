@@ -44,10 +44,12 @@ function InputField(_className, _defValue, _invert)
     return inputfield;
 }
 
-function createRemovalButton(itemToRemove, parent)
+function createRemovalButton(itemToRemove, parent, forceSize)
 {
     let remBut = document.createElement("div");
     remBut.className = "clickable removal-button-small";
+    if (forceSize != null)
+        remBut.style.height = forceSize;
 
     remBut.onclick = () => {
         // remove
@@ -56,3 +58,30 @@ function createRemovalButton(itemToRemove, parent)
 
     parent.append(remBut);
 }
+function createRemovalButtonCentered(itemToRemove, parent, forceSize)
+{
+    let remBut = document.createElement("div");
+    remBut.className = "clickable removal-button-small translate-middle";
+    if (forceSize != null)
+        remBut.style.height = forceSize;
+
+    remBut.onclick = () => {
+        // remove
+        itemToRemove.remove();
+    }
+
+    parent.append(remBut);
+}
+function createRemovalButtonCenteredVerticalOnly(itemToRemove, parent)
+{
+    let remBut = document.createElement("div");
+    remBut.className = "clickable removal-button-small translate-middle-vertical";
+
+    remBut.onclick = () => {
+        // remove
+        itemToRemove.remove();
+    }
+
+    parent.append(remBut);
+}
+

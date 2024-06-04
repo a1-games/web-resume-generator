@@ -8,6 +8,19 @@ function addLineToShortinfoArray(_iconname, _text, _invertImage, _link = null)
 }
 
 
+function addAddingButton(parent)
+{
+    let remBut = document.createElement("div");
+    remBut.className = "clickable adding-button-small";
+
+    remBut.onclick = () => {
+        addLineToShortinfoArray("checkmark", "bullet point", true)
+        appendShortInfoToParent(parent, infosarray[0]);
+        infosarray = [];
+    }
+
+    parent.append(remBut);
+}
 
 // each line should show a delete button on hover, and the holder itself should have a '+' button to add another line
 
@@ -53,13 +66,14 @@ function appendShortInfo()
         _line.append(_text);
 
         newContainer.append(_line);
-        createRemovalButton(_line, _line)
+        createRemovalButtonCenteredVerticalOnly(_line, _line)
     }
 
     // clear the array
     infosarray = [];
     
     // editing buttons
+    addAddingButton(newContainer);
     createRemovalButton(newContainer, newContainer)
 
     shortinfContainer.append(newContainer);
@@ -69,20 +83,16 @@ function appendShortInfo()
 
 function appendShortInfoToParent(_parentContainer, shortInfoObj)
 {
-    // information container
-    let newContainer = document.createElement("div");
-
-
     // icon
     let _icon = document.createElement("img");
-    _icon.className = "short-inf-icon";
+    _icon.className = "short-inf-icon replaceable-img";
     _icon.src = `Assets/icon_${shortInfoObj.iconname}.png`;
     if (shortInfoObj.invert)
         _icon.classList.add("invert-icon");
 
     // text
     let _text = document.createElement("div");
-    _text.className = "inf-font short-inf";
+    _text.className = "inf-font short-inf editable-text";
     _text.innerText = shortInfoObj.text;
     if (shortInfoObj.link != null)
     {
@@ -96,11 +106,10 @@ function appendShortInfoToParent(_parentContainer, shortInfoObj)
     _line.append(_icon);
     _line.append(_text);
 
-    newContainer.append(_line);
-    
+    createRemovalButtonCenteredVerticalOnly(_line, _line)
 
     
-    _parentContainer.append(newContainer);
+    _parentContainer.append(_line);
 }
 
 

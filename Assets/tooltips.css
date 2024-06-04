@@ -1,0 +1,86 @@
+
+
+
+
+
+
+
+
+
+
+.tooltips-container {
+
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+
+    right: 2em;
+    z-index: 100;
+    top: 30%;
+
+    height: 24em;
+    width: 22em;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    min-width: 4em;
+    color: rgb(0, 0, 0);
+    background-color: rgba(247, 247, 247, 0.582);
+    border-radius: 1em;
+
+    transition: 0.5s ease;
+}
+
+.tt-minimized {
+    width: 4em;
+    height: 3em;
+    overflow: hidden;
+}
+
+
+.tooltip-minimize {
+    position: absolute;
+
+    top: 0.5em;
+    right: 1em;
+
+    height: 2em;
+    width: 2em;
+
+    cursor: pointer;
+    overflow: hidden;
+
+    background-image: url('-.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.tooltip-maximize {
+    background-image: url('+.png');
+}
+
+.tooltip-text {
+    font-family: 'Roboto', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    font-size: 1em;
+    margin: 0.5em 1em;
+    width: 19em;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

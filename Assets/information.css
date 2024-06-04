@@ -41,10 +41,12 @@
 }
 
 .seperation-line {
+    position: relative;
     height: 0.025em;
     width: auto;
     background-color: var(--information);
     margin: 0 1rem 1rem 1rem;
+    overflow: visible;
 }
 
 

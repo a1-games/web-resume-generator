@@ -21,7 +21,7 @@ editingContainer.append(printbuttonContainer);
 
 // DOWNLOAD HTML PAGE
 
-
+/*
 
 let htmlbuttonContainer =   document.createElement("a");
 htmlbuttonContainer.className = "editing-container footspace pagewidth clickable";
@@ -37,3 +37,5 @@ htmldownloadButton.innerText = "Click to download as html for your own website"
 
 htmlbuttonContainer.append(htmldownloadButton);
 editingContainer.append(htmlbuttonContainer);
+
+*/
