@@ -8,6 +8,9 @@ printbuttonContainer.className = "editing-container footspace pagewidth clickabl
 printbuttonContainer.style.backgroundColor = "var(--shortinfo-color)";
 printbuttonContainer.style.display = "block";
 printbuttonContainer.onclick = () => {
+    // scroll to top because the margin is relative to scroll position for some godforsaken reason
+    window.scrollTo(0, 0);
+    // then, print
     print();
 };
 

@@ -12,11 +12,6 @@ html, body {
     overflow: hidden;
 }
 
-* {
-    -webkit-print-color-adjust: exact !important;   /* Chrome, Safari 6 – 15.3, Edge */
-    color-adjust: exact !important;                 /* Firefox 48 – 96 */
-    print-color-adjust: exact !important;           /* Firefox 97+, Safari 15.4+ */
-}
 
 :root {
     --information: #111111;
@@ -46,11 +41,15 @@ html, body {
 }
 
 #pi-container {
-    margin: 1em auto;
+    margin: 0 auto 1.5em auto;
+    -webkit-print-color-adjust: exact !important;   /* Chrome, Safari 6 – 15.3, Edge */
+    color-adjust: exact !important;                 /* Firefox 48 – 96 */
+    print-color-adjust: exact !important;           /* Firefox 97+, Safari 15.4+ */
 }
 
 #pi-headline {
     margin: 0;
+    padding: 0;
     justify-content: baseline;
 }
 
@@ -67,6 +66,10 @@ html, body {
     filter: none;
 }
 
+#pi-info {
+    padding: 0 0 0 2rem;
+}
+
 #pi-name {
     font-size: 1.4em;
     font-weight: 600;
@@ -78,6 +81,7 @@ html, body {
     font-family: 'Roboto', sans-serif;
     letter-spacing: 0.05em;
     font-size: 1.3em;
+    font-weight: 400;
 }
 
 .inf-title-big {
@@ -97,10 +101,12 @@ html, body {
     margin-top: 0.4em;
 }
 
-#resume-editing-aligner {
+#JS-edit-overlay {
     display: none;
 }
-#JS-edit-overlay {
+
+/* The whole editing box */
+#resume-editing-aligner {
     display: none;
 }
 
@@ -118,6 +124,9 @@ html, body {
         flex-direction: row;
         margin: 0 auto;
         width: 95%;
+        -webkit-print-color-adjust: exact !important;   /* Chrome, Safari 6 – 15.3, Edge */
+        color-adjust: exact !important;                 /* Firefox 48 – 96 */
+        print-color-adjust: exact !important;           /* Firefox 97+, Safari 15.4+ */
     }
     
 }
