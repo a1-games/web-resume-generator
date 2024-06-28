@@ -41,7 +41,7 @@ html, body {
 }
 
 #pi-container {
-    margin: 0 auto 1.5em auto;
+    margin: 2em auto 1.5em auto;
     -webkit-print-color-adjust: exact !important;   /* Chrome, Safari 6 – 15.3, Edge */
     color-adjust: exact !important;                 /* Firefox 48 – 96 */
     print-color-adjust: exact !important;           /* Firefox 97+, Safari 15.4+ */
@@ -96,6 +96,27 @@ html, body {
 .shortinf-container {
     margin: 0 0.5rem 0 0;
 }
+/* different form above */
+#shortinf-container {
+    width: 33%;
+    margin: 0 0 0 1em;
+}
+
+#inf-container {
+    width: 62%;
+    margin: 0 1em 0 0;
+}
+
+#inf-aligner {
+    flex-direction: row;
+    margin: 0 auto;
+    width: 96% !important;
+    min-width: 96% !important;
+    max-width: 96% !important;
+    -webkit-print-color-adjust: exact !important;   /* Chrome, Safari 6 – 15.3, Edge */
+    color-adjust: exact !important;                 /* Firefox 48 – 96 */
+    print-color-adjust: exact !important;           /* Firefox 97+, Safari 15.4+ */
+}
 
 .inf-title {
     margin-top: 0.4em;
@@ -110,23 +131,8 @@ html, body {
     display: none;
 }
 
+
 /* an A4 page is treated as under 800 pixels */
 @media (max-width: 800px) {
-    #inf-container {
-        width: 64%;
-        margin: 0 1em 0 0;
-    }
-    #shortinf-container {
-        width: 36%;
-        margin: 0 0 0 1em;
-    }
-    #inf-aligner {
-        flex-direction: row;
-        margin: 0 auto;
-        width: 95%;
-        -webkit-print-color-adjust: exact !important;   /* Chrome, Safari 6 – 15.3, Edge */
-        color-adjust: exact !important;                 /* Firefox 48 – 96 */
-        print-color-adjust: exact !important;           /* Firefox 97+, Safari 15.4+ */
-    }
     
 }
