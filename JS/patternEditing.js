@@ -5,7 +5,6 @@
 
 
 /* IMAGE PICKER */
-
 let selectedPCircle = null;
 
 let patternDataObjs = [
@@ -54,7 +53,7 @@ function addPatternSeletor(patternDataObj, styleURL)
     patternSelector.className = "circle-option pattern-selector clickable";
     patternSelector.style.backgroundImage = styleURL;
     patternSelector.onclick = () => {
-        patternDataObj.setPattern(patternSelector, `url('${patternDataObj.filename}')`);
+        patternDataObj.setPattern(patternSelector, `url('../IMG/${patternDataObj.filename}')`);
     };
 
     patternDataObj.element = patternSelector;
@@ -66,7 +65,7 @@ for (let i = 0; i < patternDataObjs.length; i++) {
                       `url('IMG/${patternDataObjs[i].filename}')`);
 }
 // mark the default pattern as selected
-selectPattern(patternDataObjs[2].element, `url('${patternDataObjs[2].filename}')`);
+selectPattern(patternDataObjs[2].element, `url('../IMG/${patternDataObjs[2].filename}')`);
 
 // uploading
 let patternUploadButton = document.getElementById("edit-image-picker");

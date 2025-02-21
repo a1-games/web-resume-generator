@@ -1,0 +1,51 @@
+
+
+
+#button-overlay {
+
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+
+    right: 2em;
+    z-index: 100;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.ol-box {
+    height: fit-content;
+    width: fit-content;
+
+    background-color: green;
+
+    padding: 1em;
+    margin: 1em 0 1em auto;
+
+    text-align: center;
+    vertical-align: middle;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+
+    border-radius: 0.5em;
+    border: 0.125em solid black;
+}
+
+
+.ol-textarea {
+    width: 8em;
+    height: 1em;
+    resize: none;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+

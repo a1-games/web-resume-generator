@@ -48,10 +48,10 @@ let textdiv = document.createElement("div");
 textdiv.id = "pi-info";
 
 // name div
-let namediv =  document.createElement("div");
-namediv.id ="pi-name";
-namediv.className = " editable-text";
-textdiv.append(namediv);
+const personName = document.createElement("div");
+personName.id ="pi-name";
+personName.className = " editable-text";
+textdiv.append(personName);
 
 // seperation line
 let _line = document.createElement("div");
@@ -60,10 +60,10 @@ _line.style = "margin: 0.5em 0";
 textdiv.append(_line);
 
 // one-liner div
-let onelinerdiv =  document.createElement("div");
-onelinerdiv.id ="headline-text";
-onelinerdiv.className = " editable-text";
-textdiv.append(onelinerdiv);
+const oneLiner = document.createElement("div");
+oneLiner.id ="headline-text";
+oneLiner.className = " editable-text";
+textdiv.append(oneLiner);
 
 
 
@@ -83,12 +83,12 @@ function setHeadshot(url)
 
 function setHeadlineName(name)
 {
-    namediv.innerText = name;
+    personName.innerText = name;
 }
 
 function setOnelinerText(text)
 {
-    onelinerdiv.innerText = text;
+    oneLiner.innerText = text;
 }
 
 

@@ -1,5 +1,9 @@
 // REFERENCES
 
+
+
+const buttonOverlay = document.getElementById("button-overlay");
+
 const editingContainer = document.getElementById("resume-editing-container");
 
 const infContainer = document.getElementById("inf-container");

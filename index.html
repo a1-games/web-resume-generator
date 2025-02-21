@@ -10,6 +10,8 @@
     <!-- Local Stylesheets -->
     <link rel="stylesheet" href="CSS/fonts.css" media="screen">
     <link rel="stylesheet" href="CSS/fonts.css" media="print">
+
+    <link rel="stylesheet" href="CSS/buttons.css" media="screen">
     
     <link rel="stylesheet" href="CSS/blogPost.css" media="screen">
     <link rel="stylesheet" href="CSS/blogPost.css" media="print">
@@ -53,13 +55,8 @@
     </script>
 </head>
 <body id="body">
-    
-    <!-- If you want to add a header, uncomment this div
-    <div id="header" >
-    </div> -->
 
-
-    <div id="JS-edit-overlay">
+    <div id="button-overlay">
 
     </div>
 
@@ -135,7 +132,11 @@
     </div>
 
     <!-- Tools -->
-    <script src="JS/editingReferences.js"> </script>
+    <script src="JS/global.js"> </script>
+    <script src="JS/localSave/resumeSaving.js"> </script>
+    <script src="JS/localSave/resumeLoading.js"> </script>
+    <script src="JS/localSave/resumeScanning.js"> </script>
+    <script src="JS/localSave/spawnSavingUI.js"> </script>
     <script src="JS/shortinfofiller.js"> </script>
     <script src="JS/informationfiller.js"> </script>
     <script src="JS/headlinefiller.js"> </script>

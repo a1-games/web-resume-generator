@@ -116,7 +116,7 @@ infBox.append(infBoxTitleAdderHolder);
 // Adding Button
 let infBoxTitleAdderButton = TextObject("infoAddButton light-trans clickable titleFont", "Add Title", true)
 infBoxTitleAdderButton.onclick = () => {
-    insertInformationTitle(infBoxTitleAdder.value, infContainer);
+    insertInformationTitle("TITLE", infContainer);
 };
 infBoxTitleAdderHolder.append(infBoxTitleAdderButton);
 
