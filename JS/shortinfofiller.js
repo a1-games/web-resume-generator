@@ -45,7 +45,7 @@ function appendShortInfo()
         // icon
         let _icon = document.createElement("img");
         _icon.className = "short-inf-icon replaceable-img";
-        _icon.src = `Assets/icon_${infosarray[i].iconname}.png`;
+        _icon.src = `IMG/icon_${infosarray[i].iconname}.png`;
         if (infosarray[i].invert)
             _icon.classList.add("invert-icon");
 
@@ -86,7 +86,7 @@ function appendShortInfoToParent(_parentContainer, shortInfoObj)
     // icon
     let _icon = document.createElement("img");
     _icon.className = "short-inf-icon replaceable-img";
-    _icon.src = `Assets/icon_${shortInfoObj.iconname}.png`;
+    _icon.src = `IMG/icon_${shortInfoObj.iconname}.png`;
     if (shortInfoObj.invert)
         _icon.classList.add("invert-icon");
 

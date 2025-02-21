@@ -25,7 +25,7 @@ IconReplacer.id = "bullet-point-icon-picker";
 for (let i = 0; i < icons.length; i++) {
     let newIcon = document.createElement("img");
     //newIcon.src = `Assets/icon_${icons[i]}.png`
-    newIcon.src = `Assets/icon_${icons[i]}.png`
+    newIcon.src = `IMG/icon_${icons[i]}.png`
     newIcon.className = "bullet-point-showcase clickable";
     
     newIcon.onclick = () => {

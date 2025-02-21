@@ -51,13 +51,13 @@
     cursor: pointer;
     overflow: hidden;
 
-    background-image: url('-.png');
+    background-image: url('../IMG/-.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
 .tooltip-maximize {
-    background-image: url('+.png');
+    background-image: url('../IMG/+.png');
 }
 
 .tooltip-text {

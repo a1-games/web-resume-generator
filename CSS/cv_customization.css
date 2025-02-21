@@ -19,7 +19,7 @@
         #e41d1df6; // red
      */
     --shortinfo-color: #11cf3af6;
-    --background-pattern: url("bckgrnd_pattern_02.png");
+    --background-pattern: url("../IMG/bckgrnd_pattern_02.png");
 }
 
 #pi-cv-link {
