@@ -122,7 +122,7 @@
   height: 0.7em;
   width: 0.7em;
 
-  background-image: url('x.png');
+  background-image: url('../IMG/x.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -147,7 +147,7 @@
   height: 1em;
   width: 1em;
 
-  background-image: url('+.png');
+  background-image: url('../IMG/+.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
