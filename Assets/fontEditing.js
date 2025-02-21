@@ -12,13 +12,13 @@ let sliderDataObjs = [
     {
         name:"shortinf",
         info:"Bullet Points",
-        sliderProperties:{min:0.125, max:3,step:0.125, defVal:1.25, unit:"rem"},
+        sliderProperties:{min:0.1, max:3,step:0.1, defVal:1.2, unit:"rem"},
         changeSizeProperty:(value)=>{document.documentElement.style.setProperty(`--fontsize-shortinfo`, `${value}rem`)},
     },
     {
         name:"infsize",
         info:"Information",
-        sliderProperties:{min:0.125, max:3,step:0.125, defVal:1.375, unit:"rem"},
+        sliderProperties:{min:0.1, max:3,step:0.1, defVal:1.3, unit:"rem"},
         changeSizeProperty:(value)=>{document.documentElement.style.setProperty(`--fontsize-information`, `${value}rem`)},
     },
 ]

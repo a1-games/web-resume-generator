@@ -19,16 +19,17 @@ let selectedIconElement = null;
 let bulletPointIsBeingSelected = false;
 let selectedBulletPointName = icons[0];
 
-// icon choices picker
+// icon choices picker spawning
 let IconReplacer = MultiContainer(false);
 IconReplacer.id = "bullet-point-icon-picker";
 for (let i = 0; i < icons.length; i++) {
     let newIcon = document.createElement("img");
+    //newIcon.src = `Assets/icon_${icons[i]}.png`
     newIcon.src = `Assets/icon_${icons[i]}.png`
     newIcon.className = "bullet-point-showcase clickable";
     
     newIcon.onclick = () => {
-        selectedIconElement.src = newIcon.src;
+        selectedIconElement.src = newIcon.currentSrc;
         deselectElement();
         IconReplacer.style.display = "none";
 

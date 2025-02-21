@@ -41,7 +41,7 @@ html, body {
 }
 
 #pi-container {
-    margin: 2em auto 1.5em auto;
+    margin: 0.5em auto 1.5em auto;
     -webkit-print-color-adjust: exact !important;   /* Chrome, Safari 6 – 15.3, Edge */
     color-adjust: exact !important;                 /* Firefox 48 – 96 */
     print-color-adjust: exact !important;           /* Firefox 97+, Safari 15.4+ */
