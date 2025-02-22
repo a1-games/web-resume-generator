@@ -26,57 +26,59 @@ function insertInformation(datetime, location, title, text)
     newContainer.className = "inf-container information-container";
 
     // timedate
-    let _time = document.createElement("div");
-    _time.className = "inf-font inf-datetime editable-text";
-    _time.innerText = datetime;
-    createRemovalButtonCenteredVerticalOnly(_time, _time)
+    if (datetime != undefined)
+    {
+        let _time = document.createElement("div");
+        _time.className = "inf-font inf-datetime editable-text";
+        _time.innerText = datetime;
+        createRemovalButtonCenteredVerticalOnly(_time, _time)
+        newContainer.append(_time);
+    }
 
     // location
-    let _location = document.createElement("div");
-    _location.className = "inf-font inf-location editable-text";
-    _location.innerText = location;
-    createRemovalButtonCenteredVerticalOnly(_location, _location)
+    if (location != undefined)
+    {
+        let _location = document.createElement("div");
+        _location.className = "inf-font inf-location editable-text";
+        _location.innerText = location;
+        createRemovalButtonCenteredVerticalOnly(_location, _location)
+        newContainer.append(_location);
+    }
     
     // title
-    let _title = document.createElement("div");
-    _title.className = "inf-font inf-title editable-text";
-    _title.innerText = title;
-    createRemovalButtonCenteredVerticalOnly(_title, _title)
+    if (title != undefined)
+    {
+        let _title = document.createElement("div");
+        _title.className = "inf-font inf-title editable-text";
+        _title.innerText = title;
+        createRemovalButtonCenteredVerticalOnly(_title, _title)
+        newContainer.append(_title);
+    }
 
     // description text
-    let _text = document.createElement("div");
-    _text.className = "inf-font inf-text editable-text";
-    _text.innerText = text;
-    createRemovalButtonCenteredVerticalOnly(_text, _text)
+    if (text != undefined)
+    {
+        let _text = document.createElement("div");
+        _text.className = "inf-font inf-text editable-text";
+        _text.innerText = text;
+        createRemovalButtonCenteredVerticalOnly(_text, _text)
+        newContainer.append(_text);
+    }
 
-    
-    newContainer.append(_time);
-    newContainer.append(_location);
-    newContainer.append(_title);
-    newContainer.append(_text);
     
     createRemovalButton(newContainer, newContainer)
 
     infContainer.append(newContainer);
 }
 
-function insertText(text, container)
+function insertText(text)
 {
-    // information container
-    let newContainer = document.createElement("div");
-    newContainer.className = "inf-container information-container";
+        
+    insertInformation(undefined,
+                    undefined,
+                    undefined,
+                    text);
 
-    // description text
-    let _text = document.createElement("div");
-    _text.className = "inf-font inf-text editable-text";
-    _text.innerText = text;
-    createRemovalButtonCenteredVerticalOnly(_text, _text)
-    
-    newContainer.append(_text);
-
-    createRemovalButton(newContainer, newContainer)
-    
-    container.append(newContainer);
 }
 
 

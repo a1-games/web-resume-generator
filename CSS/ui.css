@@ -18,7 +18,7 @@
     height: fit-content;
     width: fit-content;
 
-    background-color: green;
+    background-color: #252525;
 
     padding: 1em;
     margin: 1em 0 1em auto;
@@ -27,10 +27,10 @@
     vertical-align: middle;
 
     font-family: 'Roboto', sans-serif;
-    font-weight: 500;
+    font-weight: 400;
 
+    color: white;
     border-radius: 0.5em;
-    border: 0.125em solid black;
 }
 
 
@@ -41,7 +41,27 @@
     overflow: hidden;
 }
 
+.ol-safe-button {
+    padding: 0.75em;
+    background-color: rgb(66, 134, 66);
+}
+.ol-danger-button {
+    padding: 0.5em;
+    background-color: rgb(151, 70, 70);
+}
 
+.ol-m-a {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ui-notif {
+    position: fixed;
+    bottom: 2em;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
 
 
 

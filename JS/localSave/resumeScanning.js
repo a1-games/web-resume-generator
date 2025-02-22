@@ -52,13 +52,13 @@ function SaveHeadline()
     CVL_SetOneliner(oneliner);
 }
 
-function ForceSaveAll()
+function WriteAllToObject()
 {
     CVL_Clear();
     SaveHeadline();
     SaveShortInfo();
     SaveInfo();
-    console.log("Saved CV:");
+    console.log("Wrote CV to Object:");
     CVL_DEBUG();
 }
 
@@ -73,11 +73,11 @@ function _GetShortInfoObject(elem)
     for (let j = 0; j < shortinflines.length; j++) {
         let child = shortinflines[j];
         // find the icon
-        let iconsrc = child.children[0].currentSrc;
+        let icontype = child.children[0].id;
         // find the text
         let text = child.children[1].innerText;
 
-        bulletpoints.push({"iconsrc":iconsrc,"text":text});
+        bulletpoints.push({"icontype":icontype,"text":text});
     }
     return bulletpoints;
 }

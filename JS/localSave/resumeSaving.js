@@ -2,6 +2,7 @@
 
 
 
+var selectedCV_Title = "";
 var currentCV_Title = "Resume";
 
 var currentCV = {
@@ -27,13 +28,28 @@ function CVL_Clear()
     };
 }
 
+function _CanSave()
+{
+    if (currentCV_Title == "")
+    {
+        spawnNotification(false, "Couldn't save. Choose a file name.");
+        return false;
+    }
+    return true;
+}
+
 function CVL_SaveToLocalStorage()
 {
-    localStorage.setItem(currentCV_Title, currentCV);
+    if (!_CanSave()) return;
+    let json = JSON.stringify(currentCV);
+    localStorage.setItem(currentCV_Title, json);
+    spawnNotification(true, "Saved resume in browser.");
+    SavingUI_AddLocalStorageOption(currentCV_Title);
 }
 
 function CVL_Download()
 {
+    if (!_CanSave()) return;
     let json = JSON.stringify(currentCV);
 
     let blob = new Blob([json], { type: "application/json" });
@@ -45,8 +61,21 @@ function CVL_Download()
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
+    spawnNotification(true, "Download started.");
 }
 
+function CVL_DeleteItemFromLocalStorage(key)
+{
+    if (localStorage.getItem(key) != null)
+    {
+        localStorage.removeItem(key);
+        spawnNotification(true, `\"${key}\" was deleted.`);
+        document.getElementById("cv-saving-"+key).remove();
+        return;
+    }
+    
+    spawnNotification(false, `\"${key}\" was not found.`);
+}
 
 
 // --------------------
