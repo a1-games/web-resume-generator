@@ -61,8 +61,7 @@ function addPatternSeletor(patternDataObj, styleURL)
 }
 
 for (let i = 0; i < patternDataObjs.length; i++) {
-    addPatternSeletor(patternDataObjs[i],
-                      `url('IMG/${patternDataObjs[i].filename}')`);
+    addPatternSeletor(patternDataObjs[i], `url('IMG/${patternDataObjs[i].filename}')`);
 }
 // mark the default pattern as selected
 selectPattern(patternDataObjs[2].element, `url('../IMG/${patternDataObjs[2].filename}')`);
@@ -96,4 +95,15 @@ patternUploadButton.oninput = (e) => {
 let colorPicker = document.getElementById("edit-color-picker");
 colorPicker.oninput = () => {
     document.documentElement.style.setProperty(`--shortinfo-color`, `${colorPicker.value}f6`)
+    CVL_SaveMainColor(`${colorPicker.value}f6`);
 };
+
+
+
+
+
+
+
+
+
+

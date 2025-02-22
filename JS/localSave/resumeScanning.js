@@ -58,8 +58,30 @@ function WriteAllToObject()
     SaveHeadline();
     SaveShortInfo();
     SaveInfo();
+    SaveDocumentSettings();
     console.log("Wrote CV to Object:");
     CVL_DEBUG();
+}
+
+
+// --------------------
+// Private
+// --------------------
+
+function SaveDocumentSettings()
+{
+    CVL_SaveMainColor(colorPicker.value);
+
+    // I can't come up with a better way to do this.
+    let patternSelectionParent = document.getElementById("pattern-circles-container");
+    let total = patternSelectionParent.children.length-2; // -2 bc uploading stuff
+    for (let i = total-1; i <= 0; i--) {
+        if (patternSelectionParent.children[i].className.includes("selected-pattern-circle"))
+        {
+            CVL_SaveBackgroundIndex(i);
+            break;
+        }
+    }
 }
 
 

@@ -6,10 +6,12 @@ var selectedCV_Title = "";
 var currentCV_Title = "Resume";
 
 var currentCV = {
-    "name":"",
-    "oneliner":"",
+    "name":undefined,
+    "oneliner":undefined,
     "shortinfo":[],
     "info":[],
+    "color":undefined,
+    "background":undefined,
 }
 
 
@@ -21,10 +23,12 @@ function CVL_DEBUG()
 function CVL_Clear()
 {
     currentCV = {
-        "name":"",
-        "oneliner":"",
+        "name":undefined,
+        "oneliner":undefined,
         "shortinfo":[],
         "info":[],
+        "color":undefined,
+        "background":undefined,
     };
 }
 
@@ -75,6 +79,20 @@ function CVL_DeleteItemFromLocalStorage(key)
     }
     
     spawnNotification(false, `\"${key}\" was not found.`);
+}
+
+
+// --------------------
+// Document Settings
+// --------------------
+function CVL_SaveMainColor(color)
+{
+    currentCV["color"] = color;
+}
+
+function CVL_SaveBackgroundIndex(index)
+{
+    currentCV["background"] = index;
 }
 
 

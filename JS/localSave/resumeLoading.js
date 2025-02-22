@@ -38,7 +38,7 @@ function LoadResume(resumeObject)
         {
             let array = thing["shortinfo_container"];
             for (let i = 0; i < array.length; i++) {
-                addLineToShortinfoArray(array[i]["icontype"], array[i]["text"], true);
+                addLineToShortinfoArray(array[i]["icontype"], array[i]["text"], !array[i]["icontype"].includes("flag"));
             }
             appendShortInfo();
         }
@@ -79,10 +79,21 @@ function LoadResume(resumeObject)
     }
 
 
-    // go through shortinfo and info one by one
-    // add each item in order
-
-
+    // pattern and color
+    let patternIndex = resumeObject["background"];
+    //console.log(patObj);
+    if (patternIndex != undefined)
+    {
+        let patObj = patternDataObjs[patternIndex];
+        selectPattern(patObj.element, `url('../IMG/${patObj.filename}')`);
+    }
+    
+    let color = resumeObject["color"];
+    if (color != undefined)
+    {
+        colorPicker.value = color;
+        colorPicker.dispatchEvent(new Event("input"));
+    }
 }
 
 

@@ -49,7 +49,9 @@ function SavingUI_AddLocalStorageOption(key)
     option.label = key;
     option.value = key;
     option.id = "cv-saving-"+key;
-    document.getElementById("cv-saving-dropdown").append(option);
+    let dropdown = document.getElementById("cv-saving-dropdown");
+    if (dropdown != undefined)
+        dropdown.append(option);
 }
 
 function spawnLocalStorageOptions()
