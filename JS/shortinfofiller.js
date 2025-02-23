@@ -40,12 +40,13 @@ function appendShortInfo()
     blackBackground.className = "blackdrop "
     newContainer.append(blackBackground);
 
+    let rootsrc = document.title.includes("a1") ? "BLOGPOSTS/resumemaker/web-resume-generator/IMG/" : "IMG/";
     for (let i = 0; i < infosarray.length; i++) {
 
         // icon
         let _icon = document.createElement("img");
         _icon.className = "short-inf-icon replaceable-img";
-        _icon.src = `IMG/icon_${infosarray[i].iconname}.png`;
+        _icon.src = rootsrc + `icon_${infosarray[i].iconname}.png`;
         _icon.id = `${infosarray[i].iconname}`;
         if (infosarray[i].invert)
             _icon.classList.add("invert-icon");

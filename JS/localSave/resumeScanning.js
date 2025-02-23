@@ -82,7 +82,7 @@ function SaveDocumentSettings()
 
     // font size
 
-// Get the computed styles
+    // Get the computed styles
     let rootStyles = getComputedStyle(document.documentElement);
     let rootSize = rootStyles.fontSize;
     let shortinfSize = rootStyles.getPropertyValue("--fontsize-shortinfo");
