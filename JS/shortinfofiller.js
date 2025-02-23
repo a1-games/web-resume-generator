@@ -40,7 +40,7 @@ function appendShortInfo()
     blackBackground.className = "blackdrop "
     newContainer.append(blackBackground);
 
-    let rootsrc = document.title.includes("a1") ? "BLOGPOSTS/resumemaker/web-resume-generator/IMG/" : "IMG/";
+    let rootsrc = window.location.hostname.includes("a1") ? "BLOGPOSTS/resumemaker/web-resume-generator/IMG/" : "IMG/";
     for (let i = 0; i < infosarray.length; i++) {
 
         // icon
