@@ -131,6 +131,10 @@ html, body {
     display: none;
 }
 
+#button-overlay {
+    display: none;
+}
+
 
 /* an A4 page is treated as under 800 pixels */
 @media (max-width: 800px) {

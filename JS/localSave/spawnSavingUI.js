@@ -13,7 +13,7 @@ function spawnSavingUIButton(text, parent, onclick)
 }
 
 
-function spawnSaveAsJSON()
+function spawnSaving()
 {
     let box = document.createElement("div");
     box.className = "ol-box";
@@ -36,10 +36,10 @@ function spawnSaveAsJSON()
         CVL_SaveToLocalStorage();
     });
 
-    spawnSavingUIButton("Save as JSON", box, () => {
-        WriteAllToObject();
-        CVL_Download();
-    });
+    //spawnSavingUIButton("Save as JSON", box, () => {
+        //WriteAllToObject();
+        //CVL_Download();
+    //});
     
 }
 
@@ -78,9 +78,6 @@ function spawnLocalStorageOptions()
         selectedCV_Title = key;
         dropdown.append(option)
     }
-    // spawn element "select"
-    // add children "option"
-    // for each localstorage key
 
     // Add an event listener for change event
     dropdown.addEventListener("change", function () {
@@ -108,7 +105,7 @@ function spawnSavingUI()
     //});
     //uploadJSONButton.classList.remove("ol-m-a");
 
-    spawnSaveAsJSON();
+    spawnSaving();
     
 }
 

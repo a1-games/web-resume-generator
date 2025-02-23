@@ -64,10 +64,6 @@ function WriteAllToObject()
 }
 
 
-// --------------------
-// Private
-// --------------------
-
 function SaveDocumentSettings()
 {
     CVL_SaveMainColor(colorPicker.value);
@@ -75,14 +71,32 @@ function SaveDocumentSettings()
     // I can't come up with a better way to do this.
     let patternSelectionParent = document.getElementById("pattern-circles-container");
     let total = patternSelectionParent.children.length-2; // -2 bc uploading stuff
-    for (let i = total-1; i <= 0; i--) {
+    
+    for (let i = total-1; i >= 0; i--) {
         if (patternSelectionParent.children[i].className.includes("selected-pattern-circle"))
         {
-            CVL_SaveBackgroundIndex(i);
+            CVL_SaveBackgroundIndex(total-1-i);
             break;
         }
     }
+
+    // font size
+
+// Get the computed styles
+    let rootStyles = getComputedStyle(document.documentElement);
+    let rootSize = rootStyles.fontSize;
+    let shortinfSize = rootStyles.getPropertyValue("--fontsize-shortinfo");
+    let infSize = rootStyles.getPropertyValue("--fontsize-information");
+
+    CVL_SaveFontSize_Root(rootSize.replace("px", ""));
+    CVL_SaveFontSize_ShortInfo(shortinfSize.replace("rem", ""));
+    CVL_SaveFontSize_Info(infSize.replace("rem", ""));
+
 }
+
+// --------------------
+// Private
+// --------------------
 
 
 function _GetShortInfoObject(elem)

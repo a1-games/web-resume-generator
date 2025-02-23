@@ -94,6 +94,24 @@ function LoadResume(resumeObject)
         colorPicker.value = color;
         colorPicker.dispatchEvent(new Event("input"));
     }
+
+    // font sizes
+    
+    let slider = document.getElementById("remsize-slider");
+    slider.value = resumeObject["remsize"];
+    slider.dispatchEvent(new Event("input"));
+    
+    slider = document.getElementById("shortinf-slider");
+    slider.value = resumeObject["shortinf"];
+    slider.dispatchEvent(new Event("input"));
+
+    slider = document.getElementById("infsize-slider");
+    slider.value = resumeObject["infsize"];
+    slider.dispatchEvent(new Event("input"));
+
+
+
+
 }
 
 

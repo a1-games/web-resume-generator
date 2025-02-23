@@ -5,14 +5,7 @@
 var selectedCV_Title = "";
 var currentCV_Title = "Resume";
 
-var currentCV = {
-    "name":undefined,
-    "oneliner":undefined,
-    "shortinfo":[],
-    "info":[],
-    "color":undefined,
-    "background":undefined,
-}
+var currentCV = {};
 
 
 function CVL_DEBUG()
@@ -29,8 +22,12 @@ function CVL_Clear()
         "info":[],
         "color":undefined,
         "background":undefined,
+        "remsize":undefined,
+        "shortinf":undefined,
+        "infsize":undefined,
     };
 }
+CVL_Clear();
 
 function _CanSave()
 {
@@ -93,6 +90,21 @@ function CVL_SaveMainColor(color)
 function CVL_SaveBackgroundIndex(index)
 {
     currentCV["background"] = index;
+}
+
+function CVL_SaveFontSize_Root(size)
+{
+    currentCV["remsize"] = size;
+}
+
+function CVL_SaveFontSize_ShortInfo(size)
+{
+    currentCV["shortinf"] = size;
+}
+
+function CVL_SaveFontSize_Info(size)
+{
+    currentCV["infsize"] = size;
 }
 
 
