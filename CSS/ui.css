@@ -50,6 +50,10 @@
     padding: 0.5em;
     background-color: rgb(151, 70, 70);
 }
+.ol-example-button {
+    padding: 0.5em;
+    background-color: rgb(114, 114, 114);
+}
 
 .ol-m-a {
     margin-left: auto;

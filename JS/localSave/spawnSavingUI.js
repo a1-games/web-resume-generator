@@ -36,10 +36,10 @@ function spawnSaving()
         CVL_SaveToLocalStorage();
     });
 
-    //spawnSavingUIButton("Save as JSON", box, () => {
-        //WriteAllToObject();
-        //CVL_Download();
-    //});
+    spawnSavingUIButton("Save as JSON", box, () => {
+        WriteAllToObject();
+        CVL_Download();
+    });
     
 }
 
@@ -89,6 +89,14 @@ function spawnLocalStorageOptions()
         LoadResumeFromLocalStorage(dropdown.value)
     });
 
+    
+    let exampleLoad = spawnSavingUIButton("Load example", box, () => {
+        _ClearResume();
+        //LoadCVExample();
+        LoadResume(EXAMPLE_CV);
+    });
+    exampleLoad.classList.add("ol-example-button");
+
     let deleteButton = spawnSavingUIButton("Delete selected", box, () => {
         CVL_DeleteItemFromLocalStorage(dropdown.value);
     });
@@ -101,9 +109,48 @@ function spawnSavingUI()
 
     spawnLocalStorageOptions();
 
-    //let uploadJSONButton = spawnSavingUIButton("Upload JSON", buttonOverlay, () => {
-    //});
-    //uploadJSONButton.classList.remove("ol-m-a");
+    let uploadJSONButton = spawnSavingUIButton("Upload JSON", buttonOverlay, () => {
+
+        let fileInput = document.createElement("input");
+        fileInput.type = "file";
+        fileInput.multiple = false;
+        fileInput.accept = ".json";
+        fileInput.addEventListener('change', () => {
+            let file = fileInput.files[0];  // Get the selected file
+    
+            // Check if the file is a JSON file
+            if (file && file.type === 'application/json') {
+                const reader = new FileReader();
+    
+                // set what happens on readAsText
+                reader.onload = function(event) {
+                    try {
+                        let jsonData = JSON.parse(event.target.result);
+                        if (jsonData != undefined && jsonData["shortinfo"] != undefined)
+                        {
+                            LoadResume(jsonData);
+                        }
+                        else
+                        {
+                            alert('File is either corrupted or not a valid resume.');
+                        }
+                    } catch (e) {
+                        alert('File is either corrupted or not a valid resume.');
+                    }
+                };
+                reader.readAsText(file);
+
+            } else {
+                alert('Please select a valid JSON file.');
+            }
+        });
+        fileInput.click();
+
+    });
+    uploadJSONButton.classList.remove("ol-m-a");
+
+
+    // Handle file selection
 
     spawnSaving();
     
