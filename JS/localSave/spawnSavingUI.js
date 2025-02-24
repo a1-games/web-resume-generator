@@ -56,8 +56,6 @@ function SavingUI_AddLocalStorageOption(key)
 
 function spawnLocalStorageOptions()
 {
-    if (localStorage.length == 0) return;
-
     let box = document.createElement("div");
     box.className = "ol-box";
     buttonOverlay.append(box);
